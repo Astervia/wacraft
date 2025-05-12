@@ -6,7 +6,7 @@ method ships the same codebase – only the packaging differs.
 | Scenario                                           | Footprint           | Stack file / Guide                              | Ideal for                          |
 | -------------------------------------------------- | ------------------- | ----------------------------------------------- | ---------------------------------- |
 | **Quick demo / Small production / single VM prod** | 2 vCPU / 2 GB       | [Compose Stack Deployment](./docker-compose.md) | Solo founders, staging, hack‑days  |
-| **No Docker, cheap VM**                            | 512 MB RAM (server) | [Binary + Vercel](../binary-vercel.md)          | Serverless believers, minimalists  |
+| **No Docker, cheap VM**                            | 512 MB RAM (server) | [Binary + Vercel](./binary-vercel.md)           | Serverless believers, minimalists  |
 | **Bring‑your‑own Kubernetes**                      | any                 | _Helm chart (alpha)_                            | Teams with existing K8s CI/CD      |
 | **Air‑gapped / on‑prem**                           | custom              | \*Manual \*.deb / .rpm                          | Enterprises with strict compliance |
 
@@ -36,7 +36,7 @@ Read the full guide → [Compose Stack Deployment](./docker-compose.md).
 Compile (or download) the **static Go binary**, run under systemd, and host the
 Angular build on Vercel’s CDN.
 
-Guide → [Binary + Vercel](../binary-vercel.md).
+Guide → [Binary + Vercel](./binary-vercel.md).
 
 ---
 

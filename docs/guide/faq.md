@@ -35,7 +35,7 @@ Use the **Docker Compose Lite** stack: `docker compose -f docker-compose.lite.y
 
 ### I already use Vercel – can I keep it?
 
-Yes. Follow the [Binary + Vercel](../binary-vercel.md) guide: server on your VM,
+Yes. Follow the [Binary + Vercel](../deploy/binary-vercel.md) guide: server on your VM,
 UI on Vercel CDN.
 
 ### Need help with multi‑region, Kubernetes, or on‑prem?

@@ -2,7 +2,7 @@
 
 This page documents **every variable that wacraft reads at runtime**, their default values, and tips for secure production usage. Copy & modify the provided `example.env`; Docker Compose will load it automatically on `docker compose up`.
 
-Before setting up the environment variables, make sure you get Meta credentials just like instructed at [**Getting Meta Credentials**](config/meta-setup.md) page.
+Before setting up the environment variables, make sure you get Meta credentials just like instructed at [**Getting Meta Credentials**](./meta-setup.md) page.
 
 | Group                  | Variable                              | Required? | Default            | Description                                                                                                                                   |
 | ---------------------- | ------------------------------------- | --------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -20,7 +20,7 @@ Before setting up the environment variables, make sure you get Meta credentials 
 |                        | `SU_PASSWORD`                         | ✓         | `sudo`             | Password for bootstrap `su@sudo` admin account. Change immediately after first login.                                                         |
 | **Auth**               | `JWT_SECRET`                          | ✓         | `secret`           | HMAC key that signs JWTs. Minimum 32 random chars in production.                                                                              |
 |                        | `AUTH_TOKEN`                          | ✕         | _(empty)_          | Optional “API key” for machine‑to‑machine requests.                                                                                           |
-| **WhatsApp Cloud API** | `WABA_ID`                             | ✓         | _(none)_           | **Phone Number ID** returned by Graph API. See [**Getting Meta Credentials**](config/meta-setup.md).                                          |
+| **WhatsApp Cloud API** | `WABA_ID`                             | ✓         | _(none)_           | **Phone Number ID** returned by Graph API. See [**Getting Meta Credentials**](./meta-setup.md).                                               |
 |                        | `WABA_ACCOUNT_ID`                     | ✓         | _(none)_           | **WhatsApp Business Account ID** visible in the API setup banner.                                                                             |
 |                        | `WABA_ACCESS_TOKEN`                   | ✓         | _(none)_           | **Permanent System‑User token** with scopes `whatsapp_business_management` + `whatsapp_business_messaging`.                                   |
 |                        | `META_APP_SECRET`                     | ✓         | _(none)_           | App Secret used to verify the `X‑Hub‑Signature‑256` on incoming webhooks.                                                                     |
@@ -43,4 +43,4 @@ Before setting up the environment variables, make sure you get Meta credentials 
 
 ---
 
-> **Next page:** [Webhook Setup](config/webhook-setup.md) — configure an HTTPS tunnel & register your callback URL.
+> **Next page:** [Webhook Setup](./webhook-setup.md) — configure an HTTPS tunnel & register your callback URL.

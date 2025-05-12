@@ -79,7 +79,7 @@ WABA_ACCESS_TOKEN=PASTE_ME   # never expires
 
 ---
 
-> **Next page:** [Env Vars Overview](config/env-vars.md) — configure all environment variables.
+> **Next page:** [Env Vars Overview](./env-vars.md) — configure all environment variables.
 
 [1]: https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/?utm_source=chatgpt.com "Get Started - Cloud API - Meta for Developers - Facebook"
 [3]: https://developers.facebook.com/docs/marketing-api/reference/business/owned_whatsapp_business_accounts/?utm_source=chatgpt.com "Business Owned Whatsapp Business Accounts - Meta for Developers"

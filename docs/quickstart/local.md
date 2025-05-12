@@ -34,8 +34,8 @@ MAIN_SERVER_SECURITY=false
 
 _Need a refresher on each key?_ See
 
-- [Getting Meta Credentials](config/meta-setup.md) – obtain Meta creds
-- [Environment Variables Reference](config/env-vars.md) – full variable table
+- [Getting Meta Credentials](../config/meta-setup.md) – obtain Meta creds
+- [Environment Variables Reference](../config/env-vars.md) – full variable table
 
 ---
 
@@ -72,7 +72,7 @@ Meta won’t send events to plain HTTP, so run **one** of the tunnels below:
 
 ### Register & test
 
-This is a brief walkthrough of the steps to register your webhook with Meta and test it. If you don't have experience with setting up webhooks, please see the [Webhook Setup Guide](config/webhook-setup.md).
+This is a brief walkthrough of the steps to register your webhook with Meta and test it. If you don't have experience with setting up webhooks, please see the [Webhook Setup Guide](../config/webhook-setup.md).
 
 1. **App Dashboard → WhatsApp → Configuration → Edit**
 
@@ -93,4 +93,4 @@ This is a brief walkthrough of the steps to register your webhook with Meta and 
 - Take a quick tour of everything you’ve just unlocked in the [Product Overview](../guide/overview.md).
 - [Unlock more features](../support/plans.md) and test new resources.
 - When you’re ready for production, check our [Fast Production Deploy](production.md) or check the [Deployment Guides](../deploy/docker-compose.md) for many deployment options.
-- Consider using [a production Webhook Setup](config/webhook-setup.md) when you switch to produciton.
+- Consider using [a production Webhook Setup](../config/webhook-setup.md) when you switch to produciton.

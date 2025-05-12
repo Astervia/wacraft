@@ -17,7 +17,7 @@ wants HTTPS and persistence without managing Kubernetes.
 | DNS records      | `api.example.com`, `app.example.com`     | Point **A/CNAME** to the VM or LB.                          |
 | TLS cert         | Let’s Encrypt or managed LB              | Terminate HTTPS before traffic reaches the container.       |
 | CPU + RAM        | 2 vCPUs / 2 GB **min** (4 GB sweet‑spot) | UI builds at first boot; RAM spikes to ≈1.2 GB for 2‑3 min. |
-| Meta credentials | `WABA_ID`, `WABA_ACCESS_TOKEN`, …        | See [Getting Meta Credentials](config/meta-setup.md).       |
+| Meta credentials | `WABA_ID`, `WABA_ACCESS_TOKEN`, …        | See [Getting Meta Credentials](../config/meta-setup.md).    |
 
 ---
 
@@ -54,8 +54,8 @@ GOOGLE_MAPS_API_KEY=
 ```
 
 > 📝 **Reference docs:**
-> • [Environment Variables](config/env-vars.md)
-> • [Meta Credentials Guide](config/meta-setup.md)
+> • [Environment Variables](../config/env-vars.md)
+> • [Meta Credentials Guide](../config/meta-setup.md)
 
 ---
 
