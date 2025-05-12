@@ -1,0 +1,1633 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://wacraft.astervia.tech/guide/faq/">
+      
+      
+        <link rel="prev" href="../ui/">
+      
+      
+        <link rel="next" href="../../reference/changelog/">
+      
+      
+      <link rel="icon" href="../../assets/images/icon-nobg.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
+    
+    
+      
+        <title>FAQs & Troubleshooting - wacraft</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#frequently-asked-questions" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="wacraft" class="md-header__button md-logo" aria-label="wacraft" data-md-component="logo">
+      
+  <img src="../../assets/images/icon-nobg.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            wacraft
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQs & Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="wacraft" class="md-nav__button md-logo" aria-label="wacraft" data-md-component="logo">
+      
+  <img src="../../assets/images/icon-nobg.png" alt="logo">
+
+    </a>
+    wacraft
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    v0.1.0
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            v0.1.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Quick‑Start
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Quick‑Start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/local/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Local Setup (5 min)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../quickstart/production/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Production Deploy (Docker / Vercel)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_3" id="__nav_1_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Configuration
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            Configuration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/meta-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Meta Credentials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/env-vars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Env Vars Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../config/webhook-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Webhook Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_4" id="__nav_1_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deployment Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            Deployment Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/docker-compose/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker Compose
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/binary-vercel/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binary + Vercel (frontend)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/node-red/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Node‑RED Integration*
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_5" id="__nav_1_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Usage Guide
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_5">
+            <span class="md-nav__icon md-icon"></span>
+            Usage Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Product Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    UI Walkthrough
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    FAQs & Troubleshooting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs & Troubleshooting
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 General
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-wacraft" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is wacraft?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-it-really-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is it really free?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-become-a-supporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I become a supporter?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fastest-way-to-try-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fastest way to try it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-already-use-vercel-can-i-keep-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      I already use Vercel – can I keep it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#need-help-with-multiregion-kubernetes-or-onprem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need help with multi‑region, Kubernetes, or on‑prem?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accounts-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Accounts &amp; Permissions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 Accounts &amp; Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-admin-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default admin credentials?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-create-agent-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I create agent roles?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗄️ Data &amp; Backups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗄️ Data &amp; Backups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-is-data-stored" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where is data stored?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-back-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I back up?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whatsapp-meta-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 WhatsApp / Meta Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 WhatsApp / Meta Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whatsapp-pending-payment-method-card-declined-2fa-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      WhatsApp “Pending Payment Method” / card declined / 2FA issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-verify-token-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhook verify token fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messages-stuck-in-pending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages stuck in pending
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#localisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Localisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌍 Localisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-the-ui-available-in-languages-other-than-english-and-portuguese" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is the UI available in languages other than English and Portuguese?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Contributing &amp; Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Contributing &amp; Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#found-a-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Found a bug?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature requests?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commercial-sla-custom-forks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commercial SLA / custom forks?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_6" id="__nav_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_7" id="__nav_1_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Support Our Mission
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_7">
+            <span class="md-nav__icon md-icon"></span>
+            Support Our Mission
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/plans/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Plans
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/consulting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Consulting Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#general" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 General
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 General">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-wacraft" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is wacraft?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-it-really-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is it really free?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-become-a-supporter" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I become a supporter?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Deployment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fastest-way-to-try-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fastest way to try it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-already-use-vercel-can-i-keep-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      I already use Vercel – can I keep it?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#need-help-with-multiregion-kubernetes-or-onprem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Need help with multi‑region, Kubernetes, or on‑prem?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accounts-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔐 Accounts &amp; Permissions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔐 Accounts &amp; Permissions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#default-admin-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default admin credentials?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-i-create-agent-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Can I create agent roles?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗄️ Data &amp; Backups
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗄️ Data &amp; Backups">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-is-data-stored" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where is data stored?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-do-i-back-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do I back up?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whatsapp-meta-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 WhatsApp / Meta Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 WhatsApp / Meta Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#whatsapp-pending-payment-method-card-declined-2fa-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      WhatsApp “Pending Payment Method” / card declined / 2FA issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webhook-verify-token-fails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Webhook verify token fails
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#messages-stuck-in-pending" class="md-nav__link">
+    <span class="md-ellipsis">
+      Messages stuck in pending
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#localisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Localisation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌍 Localisation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#is-the-ui-available-in-languages-other-than-english-and-portuguese" class="md-nav__link">
+    <span class="md-ellipsis">
+      Is the UI available in languages other than English and Portuguese?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Contributing &amp; Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Contributing &amp; Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#found-a-bug" class="md-nav__link">
+    <span class="md-ellipsis">
+      Found a bug?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feature requests?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commercial-sla-custom-forks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commercial SLA / custom forks?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="frequently-asked-questions">❓ Frequently Asked Questions</h1>
+<p>A curated list of common questions about <strong>wacraft</strong> – from licensing to
+troubleshooting the WhatsApp Cloud account. Don’t see your question? Email us
+at <strong><a href="mailto:wacraft@astervia.tech">wacraft@astervia.tech</a></strong> and we’ll update this page.</p>
+<hr />
+<h2 id="general">📦 General</h2>
+<h3 id="what-is-wacraft">What is <em>wacraft</em>?</h3>
+<p>An open‑source platform that wraps the WhatsApp Cloud API with a Go backend,
+Angular operator UI, and automation platforms support. You self‑host it and keep
+full control of data.</p>
+<h3 id="is-it-really-free">Is it really free?</h3>
+<p>Yes – the core code is MIT‑licensed. Donating unlocks supporter‑only images
+(<code>wacraft-server</code>, Node‑RED nodes, premium analytics), but the Lite stack is
+free forever.</p>
+<h3 id="how-do-i-become-a-supporter">How do I become a supporter?</h3>
+<p>Donate <strong>X‑Y satoshis</strong> (see <a href="../../support/plans/">plans</a>). You’ll receive
+Docker credentials + repo access within 24 h.</p>
+<hr />
+<h2 id="deployment">🚀 Deployment</h2>
+<h3 id="fastest-way-to-try-it">Fastest way to try it?</h3>
+<p>Use the <strong>Docker Compose Lite</strong> stack: <code>docker compose -f docker-compose.lite.yml up -d</code>.</p>
+<h3 id="i-already-use-vercel-can-i-keep-it">I already use Vercel – can I keep it?</h3>
+<p>Yes. Follow the <a href="../binary-vercel.md">Binary + Vercel</a> guide: server on your VM,
+UI on Vercel CDN.</p>
+<h3 id="need-help-with-multiregion-kubernetes-or-onprem">Need help with multi‑region, Kubernetes, or on‑prem?</h3>
+<p>Astervia offers paid consultancy. Reach out via
+<a href="mailto:wacraft@astervia.tech">wacraft@astervia.tech</a> with your requirements.</p>
+<hr />
+<h2 id="accounts-permissions">🔐 Accounts &amp; Permissions</h2>
+<h3 id="default-admin-credentials">Default admin credentials?</h3>
+<p><code>su@sudo</code> / value of <code>SU_PASSWORD</code> in your <code>.env</code>.</p>
+<h3 id="can-i-create-agent-roles">Can I create agent roles?</h3>
+<p>RBAC scaffolding is present; detailed roles land in <strong>v0.2</strong>, but when you create a user you already specify a set of roles. For now, create separate JWT tokens for integrations.</p>
+<hr />
+<h2 id="data-backups">🗄️ Data &amp; Backups</h2>
+<h3 id="where-is-data-stored">Where is data stored?</h3>
+<p>All persistent data lives in PostgreSQL (container <code>db</code> or your managed
+instance). Media is proxied; original files stay in Meta’s CDN.</p>
+<h3 id="how-do-i-back-up">How do I back up?</h3>
+<p><code>docker compose exec db pg_dump -U postgres postgres &gt; backup.sql</code> or schedule
+managed snapshots in RDS.</p>
+<hr />
+<h2 id="whatsapp-meta-issues">🌐 WhatsApp / Meta Issues</h2>
+<h3 id="whatsapp-pending-payment-method-card-declined-2fa-issues">WhatsApp “Pending Payment Method” / card declined / 2FA issues</h3>
+<p>Those are <strong>Meta Business account problems</strong> – we can’t fix them via the API.
+Check the Meta Business Manager &gt; Payments page. If it still blocks you,
+collect screenshots and email <strong><a href="mailto:wacraft@astervia.tech">wacraft@astervia.tech</a></strong>; our team can escalate
+through partner support.</p>
+<h3 id="webhook-verify-token-fails">Webhook verify token fails</h3>
+<p>Ensure the callback URL is reachable (<code>https://api.example.com/webhook-in</code>) and
+<code>WEBHOOK_VERIFY_TOKEN</code> matches exactly – no extra whitespace.</p>
+<h3 id="messages-stuck-in-pending">Messages stuck in <em>pending</em></h3>
+<ol>
+<li>Verify your WABA is in the <strong>Business Verified</strong> state.</li>
+<li>Check <strong>Message Status Sync Timeout</strong> in <code>.env</code> (default 20 s).</li>
+<li>Inspect server logs (<code>docker compose logs server</code>).</li>
+</ol>
+<hr />
+<h2 id="localisation">🌍 Localisation</h2>
+<h3 id="is-the-ui-available-in-languages-other-than-english-and-portuguese">Is the UI available in languages other than English and Portuguese?</h3>
+<p>Currently <strong>/en</strong> and <strong>/pt‑BR</strong> are maintained. Community translations welcome
+– see <code>client/src/assets/i18n/</code>.</p>
+<hr />
+<h2 id="contributing-support">🛠️ Contributing &amp; Support</h2>
+<h3 id="found-a-bug">Found a bug?</h3>
+<p>Open an issue in <a href="https://github.com/Astervia/wacraft/issues">https://github.com/Astervia/wacraft/issues</a> with steps and
+logs.</p>
+<h3 id="feature-requests">Feature requests?</h3>
+<p>Same issue tracker – label it <strong>enhancement</strong>. Supporters get priority triage.</p>
+<h3 id="commercial-sla-custom-forks">Commercial SLA / custom forks?</h3>
+<p><a href="../../support/plans/">Plan <em>Supernova</em></a> includes SLA and bespoke development. Email <strong>Astervia</strong> to discuss.</p>
+<hr />
+<p><em>Last updated: 2025‑05‑11</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  <div
+    class="md-footer-meta"
+    style="
+      padding: 1rem 1.5rem;
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      border-top: 1px solid var(--md-default-fg-color--light);
+    "
+  >
+    <div
+      style="
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      "
+    >
+      <div>
+        <strong>wacraft</strong> by
+        <a href="https://astervia.tech" target="_blank">Astervia</a><br />
+        <span style="opacity: 0.7"
+          >Software is art. We release tools and offer support upon
+          donation.</span
+        >
+      </div>
+
+      <div
+        style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem"
+      >
+        <a href="https://github.com/Astervia/wacraft" target="_blank">GitHub</a>
+        <a href="support/plans.md">Donate</a>
+        <a href="support/consulting.md">Consulting</a>
+        <a href="faq.md">FAQ</a>
+      </div>
+    </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
