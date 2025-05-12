@@ -34,6 +34,17 @@ mkdocs serve
 
 ---
 
+## Publish to GitHub Pages
+
+You need to have `ghp-import` installed to publish the documentation to GitHub Pages. Do it with `pip install ghp-import`.
+
+```bash
+mkdocs build
+ghp-import -n -p -f site
+```
+
+---
+
 ## 🎨 Philosophy
 
 **wacraft** is open-core. Software is art — we don’t sell code.

@@ -1,4 +1,5 @@
 site_name: wacraft
+site_url: https://wacraft.astervia.tech
 theme:
   name: material
 
