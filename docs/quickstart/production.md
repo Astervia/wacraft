@@ -51,11 +51,7 @@ ENV=production
 ############################
 # PostgreSQL
 ############################
-DATABASE_HOST=db.example.com
-DATABASE_PORT=5432
-DATABASE_NAME=postgres
-DATABASE_USERNAME=postgres
-DATABASE_PASSWORD=supersecret
+DATABASE_URL=postgresql://postgres:supersecret@db.example.com:5432/postgres
 DATABASE_MAX_OPEN_CONNS=40
 DATABASE_MAX_IDLE_CONNS=20
 DATABASE_CONN_MAX_LIFETIME_MINUTES=30
