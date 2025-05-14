@@ -1005,38 +1005,10 @@
 </tr>
 <tr>
 <td><strong>Database</strong></td>
-<td><code>DATABASE_HOST</code></td>
+<td><code>DATABASE_URL</code></td>
 <td>✓</td>
-<td><code>127.0.0.1</code></td>
-<td>PostgreSQL host. Overridden to <code>db</code> by the official docker‑compose file.</td>
-</tr>
-<tr>
-<td></td>
-<td><code>DATABASE_PORT</code></td>
-<td>✓</td>
-<td><code>5432</code></td>
-<td>PostgreSQL port (standard).</td>
-</tr>
-<tr>
-<td></td>
-<td><code>DATABASE_NAME</code></td>
-<td>✓</td>
-<td><code>postgres</code></td>
-<td>Database name created by the compose stack.</td>
-</tr>
-<tr>
-<td></td>
-<td><code>DATABASE_USERNAME</code></td>
-<td>✓</td>
-<td><code>postgres</code></td>
-<td>DB super‑user; use a dedicated user in prod.</td>
-</tr>
-<tr>
-<td></td>
-<td><code>DATABASE_PASSWORD</code></td>
-<td>✓</td>
-<td><code>postgres</code></td>
-<td>Change in prod; do <strong>not</strong> commit real secrets.</td>
+<td><em>(none)</em></td>
+<td>PostgreSQL connection string. Host is overridden to <code>db</code> by the official docker‑compose file.</td>
 </tr>
 <tr>
 <td></td>
