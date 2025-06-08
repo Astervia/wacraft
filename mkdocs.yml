@@ -22,28 +22,27 @@ extra:
 
 # ---- docs navigation (v0.1.0) ----
 nav:
-  - v0.1.0:
-      - Overview: index.md
-      - Quick‑Start:
-          - Local Setup (5 min): quickstart/local.md
-          - Production Deploy (Docker / Vercel): quickstart/production.md
-      - Configuration:
-          - Getting Meta Credentials: config/meta-setup.md
-          - Env Vars Overview: config/env-vars.md
-          - Webhook Setup: config/webhook-setup.md
-      - Deployment Guides:
-          - Deployment Overview: deploy/overview.md
-          - Docker Compose: deploy/docker-compose.md # full stack
-          - Binary + Vercel (frontend): deploy/binary-vercel.md
-          - Node‑RED Integration*: deploy/node-red.md
-          # - Supporter‑only Extras*: deploy/supporters.md # deltas + link to donation page
-      - Usage Guide:
-          - Product Overview: guide/overview.md
-          - UI Walkthrough: guide/ui.md
-          - FAQs & Troubleshooting: guide/faq.md
-      - Reference:
-          # - API (auto‑generated): reference/api.md          # embed/redoc‑html export
-          - Changelog: reference/changelog.md
-      - Support Our Mission:
-          - Plans: support/plans.md
-          - Consulting Services: support/consulting.md
+  - Overview: index.md
+  - Quick‑Start:
+      - Local Setup (5 min): quickstart/local.md
+      - Production Deploy (Docker / Vercel): quickstart/production.md
+  - Configuration:
+      - Getting Meta Credentials: config/meta-setup.md
+      - Env Vars Overview: config/env-vars.md
+      - Webhook Setup: config/webhook-setup.md
+  - Deployment Guides:
+      - Deployment Overview: deploy/overview.md
+      - Docker Compose: deploy/docker-compose.md # full stack
+      - Binary + Vercel (frontend): deploy/binary-vercel.md
+      - Node‑RED Integration*: deploy/node-red.md
+      # - Supporter‑only Extras*: deploy/supporters.md # deltas + link to donation page
+  - Usage Guide:
+      - Product Overview: guide/overview.md
+      - UI Walkthrough: guide/ui.md
+      - FAQs & Troubleshooting: guide/faq.md
+  - Reference:
+      # - API (auto‑generated): reference/api.md          # embed/redoc‑html export
+      - Changelog: reference/changelog.md
+  - Support Our Mission:
+      - Plans: support/plans.md
+      - Consulting Services: support/consulting.md
