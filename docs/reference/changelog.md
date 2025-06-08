@@ -36,7 +36,7 @@ All notable changes to **wacraft** will be documented in this file following
 
 ### Documentation
 
-- Quick‑start guides: `production.md`, `binary-vercel.md`, `docker-compose.md`, `node-red.md`.
+- Quick‑start guides: [Fast Production Deploy](../quickstart/production.md), [Binary + Vercel](../deploy/binary-vercel.md), [Docker Compose](../deploy/docker-compose.md), [Node‑RED integration](../deploy/node-red.md).
 - Meta setup & webhook guides.
 - Diagrams and screenshots in `/assets`.
 
