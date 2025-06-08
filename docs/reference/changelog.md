@@ -3,7 +3,39 @@
 All notable changes to **wacraft** will be documented in this file following
 [Keep a Changelog](https://keepachangelog.com/) conventions and SemVer.
 
-## \[v0.1.0] – 2025‑05‑11
+---
+
+## \[v0.1.1] – 2025‑06‑07
+
+### Changed (wacraft-client only)
+
+- **UI**: Improved contrast for message content to enhance readability.
+- **UI**: Updated date formatting pipes and integrated copy buttons with Angular Material.
+- **UI**: Improved phone number input styling and selector feedback.
+- **UI**: Adjusted interactive header margins and content max-width behavior.
+- **Codebase**: Added new dependencies and Angular providers to support frontend features.
+- **Campaign module**: Refactored dependency error handling.
+
+### Added
+
+- **Auth**: Password reset link support.
+- **UI**: Error modal in the account component.
+- **UI**: Automatic redirect to contact chat after creating a new contact.
+
+### Fixed
+
+- **Auth**: Missing method in authentication flow.
+- **UI**: Incorrect `message-info-data` binding when clicking the copy button.
+
+### Refactored
+
+- Removed unused pipes and cleaned up related logic.
+
+> ⚠️ This release affects only the **wacraft-client**. No backend or infrastructure changes were introduced.
+
+---
+
+## \[v0.1.0] – 2025‑05‑11
 
 ### Added
 
