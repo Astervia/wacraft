@@ -40,7 +40,7 @@ You need to have `ghp-import` installed to publish the documentation to GitHub P
 
 ```bash
 mkdocs build
-ghp-import -n -p -f site
+ghp-import -n -p -f site -c wacraft.astervia.tech
 ```
 
 ---
