@@ -1,47 +1,45 @@
 site_name: wacraft
 site_url: https://wacraft.astervia.tech
 theme:
-  name: material
+    name: material
 
-  # favicon: assets/images/favicon.png
-  favicon: assets/images/icon-nobg.png
-  logo: assets/images/icon-nobg.png
+    # favicon: assets/images/favicon.png
+    favicon: assets/images/icon-nobg.png
+    logo: assets/images/icon-nobg.png
 
-  custom_dir: overrides
-
-  features:
-    - content.code.copy # copy‑to‑clipboard buttons
-    # - navigation.footer
+    features:
+        - content.code.copy # copy‑to‑clipboard buttons
+        # - navigation.footer
 
 extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/Astervia/wacraft
-    - icon: fontawesome/solid/bolt
-      link: support/plans.md
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/Astervia/wacraft
+        - icon: fontawesome/solid/bolt
+          link: support/plans.md
 
 nav:
-  - Overview: index.md
-  - Quick‑Start:
-      - Local Setup (5 min): quickstart/local.md
-      - Production Deploy (Docker / Vercel): quickstart/production.md
-  - Configuration:
-      - Getting Meta Credentials: config/meta-setup.md
-      - Env Vars Overview: config/env-vars.md
-      - Webhook Setup: config/webhook-setup.md
-  - Deployment Guides:
-      - Deployment Overview: deploy/overview.md
-      - Docker Compose: deploy/docker-compose.md # full stack
-      - Binary + Vercel (frontend): deploy/binary-vercel.md
-      - Node‑RED Integration*: deploy/node-red.md
-      # - Supporter‑only Extras*: deploy/supporters.md # deltas + link to donation page
-  - Usage Guide:
-      - Product Overview: guide/overview.md
-      - UI Walkthrough: guide/ui.md
-      - FAQs & Troubleshooting: guide/faq.md
-  - Reference:
-      # - API (auto‑generated): reference/api.md          # embed/redoc‑html export
-      - Changelog: reference/changelog.md
-  - Support Our Mission:
-      - Plans: support/plans.md
-      - Consulting Services: support/consulting.md
+    - Overview: index.md
+    - Quick‑Start:
+          - Local Setup (5 min): quickstart/local.md
+          - Production Deploy (Docker / Vercel): quickstart/production.md
+    - Configuration:
+          - Getting Meta Credentials: config/meta-setup.md
+          - Env Vars Overview: config/env-vars.md
+          - Webhook Setup: config/webhook-setup.md
+    - Deployment Guides:
+          - Deployment Overview: deploy/overview.md
+          - Docker Compose: deploy/docker-compose.md # full stack
+          - Binary + Vercel (frontend): deploy/binary-vercel.md
+          - Node‑RED Integration*: deploy/node-red.md
+          # - Supporter‑only Extras*: deploy/supporters.md # deltas + link to donation page
+    - Usage Guide:
+          - Product Overview: guide/overview.md
+          - UI Walkthrough: guide/ui.md
+          - FAQs & Troubleshooting: guide/faq.md
+    - Reference:
+          # - API (auto‑generated): reference/api.md          # embed/redoc‑html export
+          - Changelog: reference/changelog.md
+    - Support Our Mission:
+          - Plans: support/plans.md
+          - Consulting Services: support/consulting.md
