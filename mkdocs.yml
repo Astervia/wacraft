@@ -20,12 +20,29 @@ theme:
               icon: material/white-balance-sunny
               name: Switch to light mode
 
+plugins:
+    - search
+
+extra:
+    social:
+        - icon: fontawesome/solid/bolt
+          link: support/plans.md
+
 extra:
     social:
         - icon: fontawesome/brands/github
           link: https://github.com/Astervia/wacraft
+        - icon: fontawesome/brands/docker
+          link: https://hub.docker.com/orgs/astervia
+        - icon: fontawesome/solid/heart
+          link: support/plans
+        - icon: fontawesome/brands/bitcoin
+          link: bitcoin:bc1qh0tl3tn9xum66htma92lypj7s6ryr6uymut9sh
         - icon: fontawesome/solid/bolt
-          link: support/plans.md
+          link: lightning:evilpantry77@walletofsatoshi.com
+    generator: false
+
+copyright: Copyright &copy; 2025 Astervia
 
 nav:
     - Overview: index.md

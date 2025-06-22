@@ -28,7 +28,7 @@ Manage conversations, templates, contacts, webhooks and users in a clean interfa
 
 ### 2 — Go API
 
-<https://github.com/Astervia/wacraft-server>  
+<https://github.com/Astervia/wacraft-server>
 REST & WebSocket endpoints for everything the UI does—perfect for CI/CD and custom integrations. Also includes OpenAPI specs for easy client generation.
 
 ### 3 — Real‑time Webhooks
@@ -74,7 +74,5 @@ All config happens via **environment variables**. Check [Getting Meta Credenti
 - **Unlock new features / Consulting** – [wacraft@astervia.tech](mailto:wacraft@astervia.tech)
 
 ---
-
-Made with art by **Astervia**.
 
 σΔγ
