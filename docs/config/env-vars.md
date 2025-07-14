@@ -28,6 +28,7 @@ Before setting up the environment variables, make sure you get Meta credentials 
 |                        | `NODE_RED_SERVER_URL`                 | ✕         | `localhost:1880`   | Address of a Node‑RED instance used for automations.                                                                                          |
 |                        | `NODE_RED_SERVER_SECURITY`            | ✕         | `false`            | Same semantics as `MAIN_SERVER_SECURITY`.                                                                                                     |
 |                        | `GOOGLE_MAPS_API_KEY`                 | ✕         | _(none)_           | Needed only for location messages; you can omit otherwise.                                                                                    |
+|                        | `WEBSOCKET_BASE_PING_INTERVAL`        | ✕         | `30000`            | Base ping interval in milliseconds for WebSocket connections.                                                                                 |
 
 ---
 

@@ -104,14 +104,15 @@ docker run -d --name wacraft-server \
 1. **Fork** or **import** [https://github.com/Astervia/wacraft-client](https://github.com/Astervia/wacraft-client) in Vercel.
 2. In **Project Settings → Environment Variables** add:
 
-| Key                        | Value                        |
-| -------------------------- | ---------------------------- |
-| `IS_LITE`                  | `true` *(supporters: false)* |
-| `MAIN_SERVER_URL`          | `api.example.com`            |
-| `MAIN_SERVER_SECURITY`     | `true`                       |
-| `NODE_RED_SERVER_URL`      | _(optional)_                 |
-| `NODE_RED_SERVER_SECURITY` | _(optional)_                 |
-| `GOOGLE_MAPS_API_KEY`      | _(optional)_                 |
+| Key                            | Value                        |
+| ------------------------------ | ---------------------------- |
+| `IS_LITE`                      | `true` *(supporters: false)* |
+| `MAIN_SERVER_URL`              | `api.example.com`            |
+| `MAIN_SERVER_SECURITY`         | `true`                       |
+| `NODE_RED_SERVER_URL`          | _(optional)_                 |
+| `NODE_RED_SERVER_SECURITY`     | _(optional)_                 |
+| `GOOGLE_MAPS_API_KEY`          | _(optional)_                 |
+| `WEBSOCKET_BASE_PING_INTERVAL` | _(optional)_                 |
 
 3. **Build and other configurations** already in repo.
 4. Deploy—Vercel assigns `https://app.example.com` when using custom domain.

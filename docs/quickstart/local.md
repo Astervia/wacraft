@@ -26,6 +26,7 @@ WEBHOOK_VERIFY_TOKEN=any_string_you_like  # must match Meta dashboard
 # ─────────── Front‑end tweaks ───────────
 APP_TITLE="[LOCAL] wacraft"
 GOOGLE_MAPS_API_KEY=optional_for_location_messages
+WEBSOCKET_BASE_PING_INTERVAL=30000
 MAIN_SERVER_URL=127.0.0.1:6900
 MAIN_SERVER_SECURITY=false
 # NODE_RED_SERVER_URL=127.0.0.1:1880      # supporters: uncomment if needed
@@ -75,9 +76,8 @@ Meta won’t send events to plain HTTP, so run **one** of the tunnels below:
 This is a brief walkthrough of the steps to register your webhook with Meta and test it. If you don't have experience with setting up webhooks, please see the [Webhook Setup Guide](../config/webhook-setup.md).
 
 1. **App Dashboard → WhatsApp → Configuration → Edit**
-
-   - Callback URL = HTTPS tunnel + `/webhook-in`
-   - Verify Token = the same `WEBHOOK_VERIFY_TOKEN`
+    - Callback URL = HTTPS tunnel + `/webhook-in`
+    - Verify Token = the same `WEBHOOK_VERIFY_TOKEN`
 
 2. Click **Verify and Save** ✔️
 3. **Manage** fields → check **messages** → **Done**

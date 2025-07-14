@@ -151,14 +151,15 @@ Any HTTP server (Caddy, Traefik, AWS ALB…) works – just pass traffic to `lo
 1. **Import** [https://github.com/Astervia/wacraft-client](https://github.com/Astervia/wacraft-client) in Vercel.
 2. **Project Settings → Environment Variables**:
 
-| Key                        | Value                        |
-| -------------------------- | ---------------------------- |
-| `IS_LITE`                  | `true` *(supporters: false)* |
-| `MAIN_SERVER_URL`          | `api.example.com`            |
-| `MAIN_SERVER_SECURITY`     | `true`                       |
-| `NODE_RED_SERVER_URL`      | *(optional)*                 |
-| `NODE_RED_SERVER_SECURITY` | *(optional)*                 |
-| `GOOGLE_MAPS_API_KEY`      | *(optional)*                 |
+| Key                            | Value                        |
+| ------------------------------ | ---------------------------- |
+| `IS_LITE`                      | `true` *(supporters: false)* |
+| `MAIN_SERVER_URL`              | `api.example.com`            |
+| `MAIN_SERVER_SECURITY`         | `true`                       |
+| `NODE_RED_SERVER_URL`          | _(optional)_                 |
+| `NODE_RED_SERVER_SECURITY`     | _(optional)_                 |
+| `GOOGLE_MAPS_API_KEY`          | _(optional)_                 |
+| `WEBSOCKET_BASE_PING_INTERVAL` | _(optional)_                 |
 
 3. Default **build command** and **output dir** (`dist/`) are already in the repo.
 4. Add a **custom domain** `app.example.com` in Vercel → point the CNAME to Vercel.
