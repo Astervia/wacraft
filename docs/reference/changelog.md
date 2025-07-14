@@ -5,23 +5,39 @@ All notable changes to **wacraft** will be documented in this file following
 
 ---
 
+## \[v0.1.2] – 2025‑07‑14 (Client‑only update)
+
+> This update applies _only_ to the **wacraft‑client**—no backend or infrastructure changes were made.
+
+### 🎉 Added
+
+- **Feature**: Toggle password visibility on login/reset screens by @Rfluid in [#5](https://github.com/Astervia/wacraft-client/pull/5).
+
+### 🛠️ Fixed
+
+- **Error handling**: Fixed issue in async error handling by @Rfluid in [#4](https://github.com/Astervia/wacraft-client/pull/4).
+- **WebSocket**: Resolved reconnection instability in the client’s WebSocket logic by @Rfluid in [#7](https://github.com/Astervia/wacraft-client/pull/7).
+
+**Full changelog**: [v0.1.1…v0.1.2](https://github.com/Astervia/wacraft-client/compare/v0.1.1...v0.1.2)
+**Commit**: `8c936ac`
+
+---
+
 ## \[v0.1.1] – 2025‑07‑13
 
 ### Backend Changes (wacraft-server)
 
-#### Added
+#### 🎉 Added
 
 - **Validation**: Added request body and query parameter validation for key API endpoints to improve error handling and input safety.
 
-#### Fixed
+#### 🛠️ Fixed
 
 - **Templates**: Resolved bugs in the WhatsApp templates model.
 
 #### Infrastructure
 
 - `make build` is now invoked as part of the lite-release sync process to ensure OpenAPI docs and generated artifacts are always up to date in `wacraft-server-lite`.
-
----
 
 ### Frontend Changes (wacraft-client, released 2025‑06‑07)
 
@@ -34,13 +50,13 @@ All notable changes to **wacraft** will be documented in this file following
 - **Codebase**: Added new dependencies and Angular providers to support frontend features.
 - **Campaign module**: Refactored dependency error handling.
 
-#### Added
+#### 🎉 Added
 
 - **Auth**: Password reset link support.
 - **UI**: Error modal in the account component.
 - **UI**: Automatic redirect to contact chat after creating a new contact.
 
-#### Fixed
+#### 🛠️ Fixed
 
 - **Auth**: Missing method in authentication flow.
 - **UI**: Incorrect `message-info-data` binding when clicking the copy button.
@@ -53,7 +69,7 @@ All notable changes to **wacraft** will be documented in this file following
 
 ## \[v0.1.0] – 2025‑05‑11
 
-### Added
+### 🎉 Added
 
 - **First public release** of the complete stack.
 - **wacraft‑server** – Go backend for WhatsApp Cloud API
