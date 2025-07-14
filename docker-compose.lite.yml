@@ -1,50 +1,50 @@
 services:
-  server:
-    image: astervia/wacraft-server-lite:v0.1.0
-    restart: unless-stopped
-    depends_on:
-      - db
-    ports:
-      - "6900:6900"
-    env_file:
-      - .env
-    environment:
-      DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
-      HOST: http://127.0.0.1
-      PORT: 6900
-      MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS: 10
+    server:
+        image: astervia/wacraft-server-lite:v0.1.1
+        restart: unless-stopped
+        depends_on:
+            - db
+        ports:
+            - "6900:6900"
+        env_file:
+            - .env
+        environment:
+            DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
+            HOST: http://127.0.0.1
+            PORT: 6900
+            MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS: 10
 
-    networks:
-      - main
+        networks:
+            - main
 
-  client:
-    image: astervia/wacraft-client:v0.1.1
-    restart: unless-stopped
-    depends_on:
-      - server
-    ports:
-      - "80:80"
-    env_file:
-      - .env
-    environment:
-      IS_LITE: true
-    networks:
-      - main
+    client:
+        image: astervia/wacraft-client:v0.1.1
+        restart: unless-stopped
+        depends_on:
+            - server
+        ports:
+            - "80:80"
+        env_file:
+            - .env
+        environment:
+            IS_LITE: true
+        networks:
+            - main
 
-  db:
-    image: postgres:16-alpine
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB: postgres
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-    volumes:
-      - db_data:/var/lib/postgresql/data
-    networks:
-      - main
+    db:
+        image: postgres:16-alpine
+        restart: unless-stopped
+        environment:
+            POSTGRES_DB: postgres
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: postgres
+        volumes:
+            - db_data:/var/lib/postgresql/data
+        networks:
+            - main
 
 volumes:
-  db_data:
+    db_data:
 
 networks:
-  main:
+    main:

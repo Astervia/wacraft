@@ -1,6 +1,6 @@
 # 🚀 Production Deploy (Docker backend + Vercel frontend)
 
-This guide ships **one wacraft‑server** (Go API + webhooks) inside Docker and hosts the Angular UI on **Vercel**.  
+This guide ships **one wacraft‑server** (Go API + webhooks) inside Docker and hosts the Angular UI on **Vercel**.
 Result: a fully HTTPS‑secured stack reachable at `https://app.example.com` with the API on `https://api.example.com`.
 
 ---
@@ -94,7 +94,7 @@ docker run -d --name wacraft-server \
   --env-file .env \
   -p 6900:6900 \
   --restart unless-stopped \
-  astervia/wacraft-server:v0.1.0     # supporters use :v0.1.0 (full) ; others :v0.1.0-lite
+  astervia/wacraft-server:v0.1.1     # supporters use :v0.1.0 (full) ; others :v0.1.0-lite
 ```
 
 ---
@@ -109,9 +109,9 @@ docker run -d --name wacraft-server \
 | `IS_LITE`                  | `true` *(supporters: false)* |
 | `MAIN_SERVER_URL`          | `api.example.com`            |
 | `MAIN_SERVER_SECURITY`     | `true`                       |
-| `NODE_RED_SERVER_URL`      | *(optional)*                 |
-| `NODE_RED_SERVER_SECURITY` | *(optional)*                 |
-| `GOOGLE_MAPS_API_KEY`      | *(optional)*                 |
+| `NODE_RED_SERVER_URL`      | _(optional)_                 |
+| `NODE_RED_SERVER_SECURITY` | _(optional)_                 |
+| `GOOGLE_MAPS_API_KEY`      | _(optional)_                 |
 
 3. **Build and other configurations** already in repo.
 4. Deploy—Vercel assigns `https://app.example.com` when using custom domain.
