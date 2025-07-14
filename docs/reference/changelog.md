@@ -5,9 +5,27 @@ All notable changes to **wacraft** will be documented in this file following
 
 ---
 
-## \[v0.1.1] – 2025‑06‑07
+## \[v0.1.1] – 2025‑07‑13
 
-### Changed (wacraft-client only)
+### Backend Changes (wacraft-server)
+
+#### Added
+
+- **Validation**: Added request body and query parameter validation for key API endpoints to improve error handling and input safety.
+
+#### Fixed
+
+- **Templates**: Resolved bugs in the WhatsApp templates model.
+
+#### Infrastructure
+
+- `make build` is now invoked as part of the lite-release sync process to ensure OpenAPI docs and generated artifacts are always up to date in `wacraft-server-lite`.
+
+---
+
+### Frontend Changes (wacraft-client, released 2025‑06‑07)
+
+#### Changed
 
 - **UI**: Improved contrast for message content to enhance readability.
 - **UI**: Updated date formatting pipes and integrated copy buttons with Angular Material.
@@ -16,22 +34,20 @@ All notable changes to **wacraft** will be documented in this file following
 - **Codebase**: Added new dependencies and Angular providers to support frontend features.
 - **Campaign module**: Refactored dependency error handling.
 
-### Added
+#### Added
 
 - **Auth**: Password reset link support.
 - **UI**: Error modal in the account component.
 - **UI**: Automatic redirect to contact chat after creating a new contact.
 
-### Fixed
+#### Fixed
 
 - **Auth**: Missing method in authentication flow.
 - **UI**: Incorrect `message-info-data` binding when clicking the copy button.
 
-### Refactored
+#### Refactored
 
 - Removed unused pipes and cleaned up related logic.
-
-> ⚠️ This release affects only the **wacraft-client**. No backend or infrastructure changes were introduced.
 
 ---
 
