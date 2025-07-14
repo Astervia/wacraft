@@ -1072,6 +1072,7 @@ WEBHOOK_VERIFY_TOKEN=any_string_you_like  # must match Meta dashboard
 # ─────────── Front‑end tweaks ───────────
 APP_TITLE=&quot;[LOCAL] wacraft&quot;
 GOOGLE_MAPS_API_KEY=optional_for_location_messages
+WEBSOCKET_BASE_PING_INTERVAL=30000
 MAIN_SERVER_URL=127.0.0.1:6900
 MAIN_SERVER_SECURITY=false
 # NODE_RED_SERVER_URL=127.0.0.1:1880      # supporters: uncomment if needed
@@ -1143,12 +1144,10 @@ docker compose -f docker-compose.lite.yml up -d   # supporters: use docker-compo
 <ol>
 <li>
 <p><strong>App Dashboard → WhatsApp → Configuration → Edit</strong></p>
-</li>
-<li>
-<p>Callback URL = HTTPS tunnel + <code>/webhook-in</code></p>
-</li>
-<li>
-<p>Verify Token = the same <code>WEBHOOK_VERIFY_TOKEN</code></p>
+<ul>
+<li>Callback URL = HTTPS tunnel + <code>/webhook-in</code></li>
+<li>Verify Token = the same <code>WEBHOOK_VERIFY_TOKEN</code></li>
+</ul>
 </li>
 <li>
 <p>Click <strong>Verify and Save</strong> ✔️</p>
