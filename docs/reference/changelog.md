@@ -41,24 +41,21 @@ All notable changes to **wacraft** will be documented in this file following
 
 - **First public release** of the complete stack.
 - **wacraft‑server** – Go backend for WhatsApp Cloud API
-
-  - Multi‑tenant architecture with PostgreSQL persistence.
-  - Webhook relay & real‑time WebSocket feed for UI.
-  - JWT‑based auth, super‑user account, RBAC scaffolding.
+    - Multi‑tenant architecture with PostgreSQL persistence.
+    - Webhook relay & real‑time WebSocket feed for UI.
+    - JWT‑based auth, super‑user account, RBAC scaffolding.
 
 - **wacraft‑server‑lite** – same as wacraft-server but without supporter features.
 - **wacraft‑client** – Angular 19 SPA
-
-  - Chat inbox, contacts, templates, automations panel.
-  - Dark/Light theme via Tailwind + Angular Material.
-  - Internationalisation placeholders (`i18n`).
-  - User management.
-  - Webhook management.
+    - Chat inbox, contacts, templates, automations panel.
+    - Dark/Light theme via Tailwind + Angular Material.
+    - Internationalisation placeholders (`i18n`).
+    - User management.
+    - Webhook management.
 
 - **wacraft‑nodered** – pre‑baked Node‑RED with custom nodes
-
-  - `wait-text-message-match`, `respond-with-text`, `send-interactive-list`, etc.
-  - OAuth handshake against wacraft‑server using `SU_PASSWORD`.
+    - `wait-text-message-match`, `respond-with-text`, `send-interactive-list`, etc.
+    - OAuth handshake against wacraft‑server using `SU_PASSWORD`.
 
 ### Infrastructure
 
