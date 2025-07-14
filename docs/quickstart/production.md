@@ -94,7 +94,7 @@ docker run -d --name wacraft-server \
   --env-file .env \
   -p 6900:6900 \
   --restart unless-stopped \
-  astervia/wacraft-server:v0.1.1     # supporters use :v0.1.0 (full) ; others :v0.1.0-lite
+  astervia/wacraft-server-lite:v0.1.1     # supporters use wacraft-server instead of wacraft-server-lite
 ```
 
 ---
