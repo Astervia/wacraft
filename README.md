@@ -4,8 +4,6 @@ This repository contains the **official documentation** for the [wacraft](https:
 
 > 🧭 Live site: [https://wacraft.astervia.tech](https://wacraft.astervia.tech)
 
----
-
 ## 📚 What’s inside
 
 - **Getting started**: Local setup, environment, production options
@@ -15,8 +13,6 @@ This repository contains the **official documentation** for the [wacraft](https:
 - **API reference**: Auto-generated docs from OpenAPI (`/docs`)
 - **Plans & consulting**: Donation model, supporter perks, expert help
 - **Much more!**
-
----
 
 ## 🚀 Run (this documentation) locally
 
@@ -32,8 +28,6 @@ mkdocs serve
 # Open: http://127.0.0.1:8000
 ```
 
----
-
 ## Publish to GitHub Pages
 
 You need to have `ghp-import` installed to publish the documentation to GitHub Pages. Do it with `pip install ghp-import`.
@@ -42,8 +36,6 @@ You need to have `ghp-import` installed to publish the documentation to GitHub P
 mkdocs build
 ghp-import -n -p -f site -c wacraft.astervia.tech
 ```
-
----
 
 ## 🎨 Philosophy
 
@@ -57,15 +49,11 @@ Instead, you can support development via donation tiers that unlock:
 
 More info: [support/plans.md](docs/support/plans.md)
 
----
-
 ## 🧭 Hosted at
 
 > 📍 [https://wacraft.astervia.tech](https://wacraft.astervia.tech)
 
 Hosted using [MkDocs Material](https://squidfunk.github.io/mkdocs-material/), built automatically via CI.
-
----
 
 ## 📨 Support & contact
 
