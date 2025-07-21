@@ -5,6 +5,34 @@ All notable changes to **wacraft** will be documented in this file following
 
 ---
 
+## \[v0.1.3] – 2025‑07‑20 (Client‑only update)
+
+> This update applies _only_ to the **wacraft‑client**—no backend or infrastructure changes were made.
+
+### 🎉 Added
+
+- **Bulk messaging**: Introduced bulk message actions UI by @Rfluid in [#11](https://github.com/Astervia/wacraft-client/pull/11).
+- **Visual feedback**: Added status and error indicators across key interactions by @Rfluid in [#15](https://github.com/Astervia/wacraft-client/pull/15).
+- **UI improvements**: Enhanced modal contrast and added paddings for better accessibility by @Rfluid in [#14](https://github.com/Astervia/wacraft-client/pull/14).
+
+### 🛠️ Fixed
+
+- **Selection logic**: Automatically clears selected messages after bulk actions by @Rfluid in [#13](https://github.com/Astervia/wacraft-client/pull/13).
+
+### 🔧 Changed
+
+- **Inputs**: Switched input binding strategy to use framework-native approach instead of direct DOM manipulation by @Rfluid in [#16](https://github.com/Astervia/wacraft-client/pull/16).
+- **Branding**: Updated to new favicon by @Rfluid in [#12](https://github.com/Astervia/wacraft-client/pull/12).
+
+### 📦 Dependencies
+
+- **Bumped** various frontend dependencies via `npm_and_yarn` group by @dependabot\[bot] in [#10](https://github.com/Astervia/wacraft-client/pull/10).
+
+**Full changelog**: [v0.1.2…v0.1.3](https://github.com/Astervia/wacraft-client/compare/v0.1.2...v0.1.3)
+**Commit**: `c23d186`
+
+---
+
 ## \[v0.1.2] – 2025‑07‑14 (Client‑only update)
 
 > This update applies _only_ to the **wacraft‑client**—no backend or infrastructure changes were made.
