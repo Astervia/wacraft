@@ -5,6 +5,30 @@ All notable changes to **wacraft** will be documented in this file following
 
 ---
 
+## \[v0.1.4] – 2025‑07‑22 (Client‑only update)
+
+> This update applies _only_ to the **wacraft‑client**—no backend or infrastructure changes were made.
+
+### 🎉 Added
+
+- **Template messages**: Introduced a _pending_ state to better represent template message delivery progress by @Rfluid in [#27](https://github.com/Astervia/wacraft-client/pull/27).
+
+### 🛠️ Fixed
+
+- **Icon alignment**: Fixed icon misalignment in buttons by applying Tailwind’s flex utilities by @Rfluid in [#20](https://github.com/Astervia/wacraft-client/pull/20).
+- **Light theme**: Resolved several visual issues affecting the light theme UI by @Rfluid in [#22](https://github.com/Astervia/wacraft-client/pull/22).
+- **Localization**: Corrected the Portuguese (pt‑BR) status modal title translation by @Rfluid in [#23](https://github.com/Astervia/wacraft-client/pull/23).
+- **UI logic**: Fixed visibility logic to correctly hide the edit button where appropriate by @Rfluid in [#24](https://github.com/Astervia/wacraft-client/pull/24).
+
+### 📦 Dependencies
+
+- **Bumped** `form-data` from `4.0.3` to `4.0.4` via `npm_and_yarn` group by @dependabot\[bot] in [#25](https://github.com/Astervia/wacraft-client/pull/25).
+
+**Full changelog**: [v0.1.3…v0.1.4](https://github.com/Astervia/wacraft-client/compare/v0.1.3...v0.1.4)
+**Commit**: `f3a8307`
+
+---
+
 ## \[v0.1.3] – 2025‑07‑20 (Client‑only update)
 
 > This update applies _only_ to the **wacraft‑client**—no backend or infrastructure changes were made.
