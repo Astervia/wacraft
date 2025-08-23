@@ -42,7 +42,7 @@ Now that you have your custom Docker images, you can start exploring the premium
 
 ### 2.1. Explore Campaigns
 
-The **Campaigns** feature allows you to send bulk messages to your users. To learn how to create and manage campaigns, please refer to our detailed **[Campaigns Guide](./campaigns.md)**.
+The **Campaigns** feature allows you to send bulk messages to your users. To learn how to create and manage campaigns, please refer to our detailed **[Campaigns Guide](../guide/campaigns.md)**.
 
 ### 2.2. Dive into Node-RED Automations
 
