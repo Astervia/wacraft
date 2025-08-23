@@ -25,11 +25,6 @@ plugins:
 
 extra:
     social:
-        - icon: fontawesome/solid/bolt
-          link: support/plans.md
-
-extra:
-    social:
         - icon: fontawesome/brands/github
           link: https://github.com/Astervia/wacraft
         - icon: fontawesome/brands/docker
@@ -62,6 +57,7 @@ nav:
     - Usage Guide:
           - Product Overview: guide/overview.md
           - UI Walkthrough: guide/ui.md
+          - Campaigns: guide/campaigns.md
           - FAQs & Troubleshooting: guide/faq.md
     - Reference:
           # - API (auto‑generated): reference/api.md          # embed/redoc‑html export
