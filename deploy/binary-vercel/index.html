@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -842,12 +842,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guide/campaigns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campaigns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guide/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     FAQs & Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started-supporters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started (Supporters)*
     
   </span>
   
@@ -1190,7 +1236,6 @@
 <p>Spin up <strong>wacraft‑server</strong> as a standalone Go executable (no Docker) on your favourite VM or
 bare‑metal box, then host the Angular UI on <strong>Vercel</strong>.
 Result: <code>https://app.example.com</code> + <code>https://api.example.com</code> with full HTTPS and <strong>zero container runtime</strong> on the server.</p>
-<hr />
 <h2 id="prerequisites">🧰 Prerequisites</h2>
 <table>
 <thead>
@@ -1228,7 +1273,6 @@ Result: <code>https://app.example.com</code> + <code>https://api.example.com</co
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="1-provision-postgresql">1 — Provision PostgreSQL</h2>
 <p>Choose <strong>one</strong>:</p>
 <ul>
@@ -1244,7 +1288,6 @@ Result: <code>https://app.example.com</code> + <code>https://api.example.com</co
   postgres:16-alpine
 </code></pre>
 <p>Update the <code>DATABASE_*</code> section later.</p>
-<hr />
 <h2 id="2-grab-the-binary">2 — Grab the binary</h2>
 <h3 id="21-build-from-source">2.1 Build from source</h3>
 <pre><code class="language-bash">git clone https://github.com/Astervia/wacraft-server-lite.git
@@ -1287,7 +1330,6 @@ WEBHOOK_VERIFY_TOKEN=
 MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS=20
 </code></pre>
 <p>Need the full table? See <a href="../../config/env-vars/">Environment Variables Reference</a>.</p>
-<hr />
 <h2 id="4-run-wacraftserver-behind-tls">4 — Run <strong>wacraft‑server</strong> behind TLS</h2>
 <h3 id="41-systemd-unit-recommended">4.1 Systemd unit (recommended)</h3>
 <pre><code class="language-ini"># /etc/systemd/system/wacraft.service
@@ -1330,7 +1372,6 @@ journalctl -fu wacraft
 }
 </code></pre>
 <p>Any HTTP server (Caddy, Traefik, AWS ALB…) works – just pass traffic to <code>localhost:6900</code>.</p>
-<hr />
 <h2 id="5-deploy-the-angular-ui-to-vercel">5 — Deploy the Angular UI to Vercel</h2>
 <ol>
 <li><strong>Import</strong> <a href="https://github.com/Astervia/wacraft-client">https://github.com/Astervia/wacraft-client</a> in Vercel.</li>
@@ -1368,21 +1409,15 @@ journalctl -fu wacraft
 <td><code>GOOGLE_MAPS_API_KEY</code></td>
 <td><em>(optional)</em></td>
 </tr>
-<tr>
-<td><code>WEBSOCKET_BASE_PING_INTERVAL</code></td>
-<td><em>(optional)</em></td>
-</tr>
 </tbody>
 </table>
 <ol>
 <li>Default <strong>build command</strong> and <strong>output dir</strong> (<code>dist/</code>) are already in the repo.</li>
 <li>Add a <strong>custom domain</strong> <code>app.example.com</code> in Vercel → point the CNAME to Vercel.</li>
 </ol>
-<hr />
 <h2 id="6-register-the-meta-webhook">6 — Register the Meta Webhook</h2>
 <p>Follow <a href="../../config/webhook-setup/">Webhook Setup</a> and set the <strong>Callback URL</strong> to
 <code>https://api.example.com/webhook-in</code> with the same <code>WEBHOOK_VERIFY_TOKEN</code>.</p>
-<hr />
 <h2 id="7-production-checklist">7 — Production Checklist</h2>
 <ul>
 <li>[ ] TLS certs valid for both subdomains.</li>
@@ -1392,7 +1427,6 @@ journalctl -fu wacraft
 <li>[ ] Webhook URL + verify token registered in Meta.</li>
 <li>[ ] systemd service set to auto‑restart.</li>
 </ul>
-<hr />
 <h2 id="8-next-steps">8 — Next steps</h2>
 <ul>
 <li>Check the <a href="../../guide/ui/">UI Walkthrough</a> to get familiar with the UI and resources.</li>
@@ -1539,7 +1573,7 @@ journalctl -fu wacraft
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

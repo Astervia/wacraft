@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -773,12 +773,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guide/campaigns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campaigns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guide/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     FAQs & Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started-supporters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started (Supporters)*
     
   </span>
   
@@ -1050,7 +1096,6 @@
 
 <h1 id="quick-start-local-5-min">⚡ Quick Start (Local, 5 min)</h1>
 <p>This guide spins up <strong>wacraft</strong> for local hacking: the Go API, PostgreSQL, and the Angular UI (lite) in Docker—plus an HTTPS tunnel so Meta’s webhooks reach your machine.</p>
-<hr />
 <h2 id="1-prepare-a-minimal-env">1 — Prepare a minimal <code>.env</code></h2>
 <ol>
 <li>Duplicate <code>compose.env</code> ➜ <code>.env</code>.</li>
@@ -1083,7 +1128,6 @@ MAIN_SERVER_SECURITY=false
 <li><a href="../../config/meta-setup/">Getting Meta Credentials</a> – obtain Meta creds</li>
 <li><a href="../../config/env-vars/">Environment Variables Reference</a> – full variable table</li>
 </ul>
-<hr />
 <h2 id="2-launch-the-stack">2 — Launch the stack</h2>
 <pre><code class="language-bash">git clone https://github.com/Astervia/wacraft.git
 cd wacraft
@@ -1110,7 +1154,6 @@ docker compose -f docker-compose.lite.yml up -d   # supporters: use docker-compo
 <p><strong>Tip:</strong> Need to reset the DB?
 <code>docker compose -f docker-compose.lite.yml down -v</code> drops the volume.</p>
 </blockquote>
-<hr />
 <h2 id="3-expose-an-https-webhook">3 — Expose an HTTPS webhook</h2>
 <p>Meta won’t send events to plain HTTP, so run <strong>one</strong> of the tunnels below:</p>
 <table>
@@ -1158,7 +1201,6 @@ docker compose -f docker-compose.lite.yml up -d   # supporters: use docker-compo
 <blockquote>
 <p><strong>Important:</strong> If you restart the tunnel, its hostname changes—update the Callback URL accordingly.</p>
 </blockquote>
-<hr />
 <h2 id="4-next-steps">4 — Next steps</h2>
 <ul>
 <li>Check the <a href="../../guide/ui/">UI Walkthrough</a> to get familiar with the UI and resources.</li>
@@ -1307,7 +1349,7 @@ docker compose -f docker-compose.lite.yml up -d   # supporters: use docker-compo
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

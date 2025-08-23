@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -791,12 +791,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guide/campaigns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campaigns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guide/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     FAQs & Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started-supporters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started (Supporters)*
     
   </span>
   
@@ -1086,10 +1132,9 @@
 
 <h1 id="getting-meta-credentials">Getting Meta Credentials</h1>
 <blockquote>
-<p>Collect the <strong>four</strong> variables wacraft needs to talk to WhatsApp Cloud API:<br />
+<p>Collect the <strong>four</strong> variables wacraft needs to talk to WhatsApp Cloud API:
 <code>META_APP_SECRET</code>, <code>WABA_ACCOUNT_ID</code>, <code>WABA_ID</code> and <strong><code>WABA_ACCESS_TOKEN</code></strong> (permanent).</p>
 </blockquote>
-<hr />
 <h2 id="1-create-a-businesstype-meta-app-copy-meta_app_secret">1 — Create a Business‑type Meta App &amp; copy <code>META_APP_SECRET</code></h2>
 <ol>
 <li>Go to <a href="https://developers.facebook.com">https://developers.facebook.com</a>, click <strong>My Apps → Create App</strong>, select <strong>Business</strong> and finish the wizard.</li>
@@ -1097,7 +1142,6 @@
 </ol>
 <pre><code class="language-env">META_APP_SECRET=PASTE_ME
 </code></pre>
-<hr />
 <h2 id="2-enable-whatsapp-grab-waba_account_id">2 — Enable WhatsApp &amp; grab <code>WABA_ACCOUNT_ID</code></h2>
 <ol>
 <li>In the left menu choose <strong>WhatsApp → API Setup</strong>. Finish the sandbox step that verifies a personal number. (<a href="https://developers.facebook.com/docs/whatsapp/cloud-api/get-started/?utm_source=chatgpt.com" title="Get Started - Cloud API - Meta for Developers - Facebook">Facebook Developers</a>)</li>
@@ -1106,7 +1150,6 @@
 <pre><code class="language-env">WABA_ACCOUNT_ID=PASTE_ME
 </code></pre>
 <p><em>(You can always find it again in <strong>Business Settings → Accounts → WhatsApp Accounts</strong>.)</em></p>
-<hr />
 <h2 id="3-find-the-phone-number-id-waba_id">3 — Find the Phone Number ID (<code>WABA_ID</code>)</h2>
 <h3 id="option-a-dashboard">Option A — Dashboard</h3>
 <p>Right below your sandbox number on the <strong>API Setup</strong> screen you’ll see <strong>Phone Number ID</strong>. Copy it. (<a href="https://developers.facebook.com/docs/whatsapp/cloud-api/reference/phone-numbers/?utm_source=chatgpt.com" title="Phone Numbers - Cloud API - Meta for Developers">Facebook Developers</a>)</p>
@@ -1117,7 +1160,6 @@
 <p>The returned <code>id</code> is the <strong>Phone Number ID</strong>. (<a href="https://developers.facebook.com/docs/whatsapp/business-management-api/manage-phone-numbers/?utm_source=chatgpt.com" title="Retrieve Phone Numbers - WhatsApp Business Management API">Facebook Developers</a>)</p>
 <pre><code class="language-env">WABA_ID=PASTE_ME
 </code></pre>
-<hr />
 <h2 id="4-generate-a-permanent-waba_access_token">4 — Generate a Permanent <code>WABA_ACCESS_TOKEN</code></h2>
 <p>Short‑lived sandbox tokens expire after 24 h; create a never‑expiring one via <strong>System Users</strong>.</p>
 <ol>
@@ -1132,7 +1174,6 @@
 <blockquote>
 <p><strong>Keep it secret!</strong> Anyone with this token can message from your number. Rotate only via System Users. (<a href="https://developers.facebook.com/blog/post/2022/12/05/auth-tokens/?utm_source=chatgpt.com" title="Using Authorization Tokens for the WhatsApp Business Platform">Facebook Developers</a>)</p>
 </blockquote>
-<hr />
 <h2 id="checklist">✅ Checklist</h2>
 <table>
 <thead>
@@ -1160,7 +1201,6 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <blockquote>
 <p><strong>Next page:</strong> <a href="../env-vars/">Env Vars Overview</a> — configure all environment variables.</p>
 </blockquote>
@@ -1304,7 +1344,7 @@
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

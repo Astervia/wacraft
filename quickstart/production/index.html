@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -809,12 +809,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guide/campaigns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campaigns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guide/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     FAQs & Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started-supporters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started (Supporters)*
     
   </span>
   
@@ -1123,7 +1169,6 @@
 <h1 id="production-deploy-docker-backend-vercel-frontend">🚀 Production Deploy (Docker backend + Vercel frontend)</h1>
 <p>This guide ships <strong>one wacraft‑server</strong> (Go API + webhooks) inside Docker and hosts the Angular UI on <strong>Vercel</strong>.
 Result: a fully HTTPS‑secured stack reachable at <code>https://app.example.com</code> with the API on <code>https://api.example.com</code>.</p>
-<hr />
 <h2 id="prerequisites">🧰 Prerequisites</h2>
 <table>
 <thead>
@@ -1156,7 +1201,6 @@ Result: a fully HTTPS‑secured stack reachable at <code>https://app.example.com
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="1-provision-postgresql">1 — Provision PostgreSQL</h2>
 <p>Choose <strong>one</strong>:</p>
 <ul>
@@ -1173,7 +1217,6 @@ Result: a fully HTTPS‑secured stack reachable at <code>https://app.example.com
   postgres:16-alpine
 </code></pre>
 <p>Update the <code>DATABASE_*</code> keys accordingly.</p>
-<hr />
 <h2 id="2-create-the-server-env">2 — Create the server <code>.env</code></h2>
 <p><code>wacraft-server</code> <strong>will not start</strong> if any required var is blank.</p>
 <pre><code class="language-env">############################
@@ -1214,7 +1257,6 @@ WEBHOOK_VERIFY_TOKEN=
 MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS=20
 </code></pre>
 <p>Save as <code>.env</code>.</p>
-<hr />
 <h2 id="3-run-wacraftserver-behind-a-reverse-proxy">3 — Run <strong>wacraft‑server</strong> behind a reverse proxy</h2>
 <h3 id="single-docker-run-quick">Single <code>docker run</code> (quick)</h3>
 <pre><code class="language-bash">docker run -d --name wacraft-server \
@@ -1223,7 +1265,6 @@ MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS=20
   --restart unless-stopped \
   astervia/wacraft-server-lite:v0.1.1     # supporters use wacraft-server instead of wacraft-server-lite
 </code></pre>
-<hr />
 <h2 id="4-deploy-the-angular-ui-to-vercel">4 — Deploy the Angular UI to Vercel</h2>
 <ol>
 <li><strong>Fork</strong> or <strong>import</strong> <a href="https://github.com/Astervia/wacraft-client">https://github.com/Astervia/wacraft-client</a> in Vercel.</li>
@@ -1271,10 +1312,8 @@ MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS=20
 <li><strong>Build and other configurations</strong> already in repo.</li>
 <li>Deploy—Vercel assigns <code>https://app.example.com</code> when using custom domain.</li>
 </ol>
-<hr />
 <h2 id="5-create-meta-webhook">5 — Create Meta Webhook</h2>
 <p>Follow the <a href="../../config/webhook-setup/">Webhook Setup Guide</a> to register the callback URL in Meta.</p>
-<hr />
 <h2 id="6-checklist">6 — Checklist</h2>
 <ul>
 <li>[ ] TLS certificates in place (Let’s Encrypt or LB).</li>
@@ -1430,7 +1469,7 @@ MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS=20
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

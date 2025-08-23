@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -731,12 +731,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guide/campaigns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campaigns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guide/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     FAQs & Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started-supporters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started (Supporters)*
     
   </span>
   
@@ -1141,14 +1187,12 @@
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="production-hardening-tips">Production Hardening Tips</h2>
 <ul>
 <li><strong>Keep <code>.env</code> out of VCS</strong> – add it to <code>.gitignore</code> or store secrets in your CI/CD vault.</li>
 <li><strong>Rotate secrets</strong> regularly; replace <code>JWT_SECRET</code>, <code>WABA_ACCESS_TOKEN</code>, and DB credentials via environment‑specific pipelines.</li>
 <li><strong>Override via Docker Compose</strong> – the stack’s <code>docker‑compose.yml</code> can supply <code>env_file</code> and <code>environment</code> entries that shadow values in <code>.env</code>. Order matters: later files or inline <code>environment:</code> keys win.</li>
 </ul>
-<hr />
 <blockquote>
 <p><strong>Next page:</strong> <a href="../webhook-setup/">Webhook Setup</a> — configure an HTTPS tunnel &amp; register your callback URL.</p>
 </blockquote>
@@ -1292,7 +1336,7 @@
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

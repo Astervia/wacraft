@@ -11,14 +11,14 @@
         <link rel="canonical" href="https://wacraft.astervia.tech/guide/faq/">
       
       
-        <link rel="prev" href="../ui/">
+        <link rel="prev" href="../campaigns/">
       
       
-        <link rel="next" href="../../reference/changelog/">
+        <link rel="next" href="../../deploy/getting-started-supporters/">
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -677,6 +677,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../campaigns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campaigns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -991,6 +1014,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started-supporters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started (Supporters)*
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1466,7 +1512,6 @@
 <p>A curated list of common questions about <strong>wacraft</strong> – from licensing to
 troubleshooting the WhatsApp Cloud account. Don’t see your question? Email us
 at <strong><a href="mailto:wacraft@astervia.tech">wacraft@astervia.tech</a></strong> and we’ll update this page.</p>
-<hr />
 <h2 id="general">📦 General</h2>
 <h3 id="what-is-wacraft">What is <em>wacraft</em>?</h3>
 <p>An open‑source platform that wraps the WhatsApp Cloud API with a Go backend,
@@ -1479,7 +1524,6 @@ free forever.</p>
 <h3 id="how-do-i-become-a-supporter">How do I become a supporter?</h3>
 <p>Donate <strong>X‑Y satoshis</strong> (see <a href="../../support/plans/">plans</a>). You’ll receive
 Docker credentials + repo access within 24 h.</p>
-<hr />
 <h2 id="deployment">🚀 Deployment</h2>
 <h3 id="fastest-way-to-try-it">Fastest way to try it?</h3>
 <p>Use the <strong>Docker Compose Lite</strong> stack: <code>docker compose -f docker-compose.lite.yml up -d</code>.</p>
@@ -1489,13 +1533,11 @@ UI on Vercel CDN.</p>
 <h3 id="need-help-with-multiregion-kubernetes-or-onprem">Need help with multi‑region, Kubernetes, or on‑prem?</h3>
 <p>Astervia offers paid consultancy. Reach out via
 <a href="mailto:wacraft@astervia.tech">wacraft@astervia.tech</a> with your requirements.</p>
-<hr />
 <h2 id="accounts-permissions">🔐 Accounts &amp; Permissions</h2>
 <h3 id="default-admin-credentials">Default admin credentials?</h3>
 <p><code>su@sudo</code> / value of <code>SU_PASSWORD</code> in your <code>.env</code>.</p>
 <h3 id="can-i-create-agent-roles">Can I create agent roles?</h3>
 <p>RBAC scaffolding is present; detailed roles land in <strong>v0.2</strong>, but when you create a user you already specify a set of roles. For now, create separate JWT tokens for integrations.</p>
-<hr />
 <h2 id="data-backups">🗄️ Data &amp; Backups</h2>
 <h3 id="where-is-data-stored">Where is data stored?</h3>
 <p>All persistent data lives in PostgreSQL (container <code>db</code> or your managed
@@ -1503,7 +1545,6 @@ instance). Media is proxied; original files stay in Meta’s CDN.</p>
 <h3 id="how-do-i-back-up">How do I back up?</h3>
 <p><code>docker compose exec db pg_dump -U postgres postgres &gt; backup.sql</code> or schedule
 managed snapshots in RDS.</p>
-<hr />
 <h2 id="whatsapp-meta-issues">🌐 WhatsApp / Meta Issues</h2>
 <h3 id="whatsapp-pending-payment-method-card-declined-2fa-issues">WhatsApp “Pending Payment Method” / card declined / 2FA issues</h3>
 <p>Those are <strong>Meta Business account problems</strong> – we can’t fix them via the API.
@@ -1519,12 +1560,10 @@ through partner support.</p>
 <li>Check <strong>Message Status Sync Timeout</strong> in <code>.env</code> (default 20 s).</li>
 <li>Inspect server logs (<code>docker compose logs server</code>).</li>
 </ol>
-<hr />
 <h2 id="localisation">🌍 Localisation</h2>
 <h3 id="is-the-ui-available-in-languages-other-than-english-and-portuguese">Is the UI available in languages other than English and Portuguese?</h3>
 <p>Currently <strong>/en</strong> and <strong>/pt‑BR</strong> are maintained. Community translations welcome
 – see <code>client/src/assets/i18n/</code>.</p>
-<hr />
 <h2 id="contributing-support">🛠️ Contributing &amp; Support</h2>
 <h3 id="found-a-bug">Found a bug?</h3>
 <p>Open an issue in <a href="https://github.com/Astervia/wacraft/issues">https://github.com/Astervia/wacraft/issues</a> with steps and
@@ -1564,7 +1603,7 @@ logs.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../ui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UI Walkthrough">
+          <a href="../campaigns/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Campaigns">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1574,20 +1613,20 @@ logs.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                UI Walkthrough
+                Campaigns
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../reference/changelog/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog">
+          <a href="../../deploy/getting-started-supporters/" class="md-footer__link md-footer__link--next" aria-label="Next: Getting Started (Supporters)*">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Changelog
+                Getting Started (Supporters)*
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1675,7 +1714,7 @@ logs.</p>
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

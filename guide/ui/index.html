@@ -14,11 +14,11 @@
         <link rel="prev" href="../overview/">
       
       
-        <link rel="next" href="../faq/">
+        <link rel="next" href="../campaigns/">
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -809,12 +809,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../campaigns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campaigns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     FAQs & Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deploy/getting-started-supporters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started (Supporters)*
     
   </span>
   
@@ -1124,7 +1170,6 @@
 <p>Welcome to a quick tour of the <strong>wacraft‑client</strong> interface. This guide covers
 the daily workflow for operators and admins, from chatting with users to
 sending bulk campaigns and wiring automations.</p>
-<hr />
 <h2 id="1-layout-at-a-glance">1 — Layout at a glance</h2>
 <p><img alt="Chats UI" src="../../assets/images/chats-ui-with-conversation.png" /></p>
 <table>
@@ -1161,7 +1206,6 @@ sending bulk campaigns and wiring automations.</p>
 <p><strong>Keyboard power‑users:</strong> press <strong>Ctrl /</strong> anywhere to open the shortcut cheat‑sheet.</p>
 </blockquote>
 <p><img alt="Keyboard shortcuts" src="../../assets/images/keyboard-shortcuts.png" /></p>
-<hr />
 <h2 id="2-chats-conversation-tools">2 — Chats &amp; Conversation tools</h2>
 <h3 id="21-live-chat">2.1 Live chat</h3>
 <p><img alt="Conversation" src="../../assets/images/conversation-with-options-popup.png" /></p>
@@ -1187,7 +1231,6 @@ sending bulk campaigns and wiring automations.</p>
 </tbody>
 </table>
 <p>Both panes slide in from the right without leaving the chat context.</p>
-<hr />
 <h2 id="3-account-local-settings">3 — Account &amp; Local settings</h2>
 <p><img alt="Account settings" src="../../assets/images/account-settings.png" /></p>
 <ul>
@@ -1197,17 +1240,18 @@ sending bulk campaigns and wiring automations.</p>
 <li><strong>Auto preview &amp; mark as read:</strong> tweak message behaviour only for <em>your</em>
   browser; doesn’t affect other agents.</li>
 </ul>
-<hr />
 <h2 id="4-templates-csv-campaigns">4 — Templates ➡️ CSV ➡️ Campaigns</h2>
 <p>The fastest way to launch a bulk send is <strong>Template → CSV → Campaign</strong>.</p>
 <ol>
-<li><strong>Open Templates</strong> in the sidebar <em>(hotkey <strong>4</strong>)</em>.
-   Hover a template and click the <strong>📄 CSV</strong> button.</li>
-</ol>
+<li>
+<p><strong>Open Templates</strong> in the sidebar <em>(hotkey <strong>4</strong>)</em>.
+   Hover a template and click the <strong>📄 CSV</strong> button.</p>
 <p><img alt="Template CSV" src="../../assets/images/template-with-csv-button-hover.png" /></p>
-<ol>
-<li>A CSV is downloaded with the exact variables required by that template.
-   <em>Fill it</em>: one row per recipient.</li>
+</li>
+<li>
+<p>A CSV is downloaded with the exact variables required by that template.
+   <em>Fill it</em>: one row per recipient.</p>
+</li>
 </ol>
 <pre><code class="language-csv">messaging_product,recipient_type,to,type,template.name,template.language.code,template.components
 whatsapp,individual,1111111111,template,hello_world,en_US,[]
@@ -1221,18 +1265,17 @@ whatsapp,individual,3333333333,template,hello_world,en_US,[]
 </li>
 <li>
 <p>In <strong>Add messages to campaign</strong> drag‑and‑drop the CSV or click to upload.</p>
-</li>
-</ol>
 <p><img alt="Campaign upload" src="../../assets/images/campaigns-overview.png" /></p>
-<ol>
-<li>Review totals, then hit the blue <strong>Send ▶️</strong> button. Status updates live
-   (messages sent / unsent). That’s it – campaign en‑route!</li>
+</li>
+<li>
+<p>Review totals, then hit the blue <strong>Send ▶️</strong> button. Status updates live
+   (messages sent / unsent). That’s it – campaign en‑route!</p>
+</li>
 </ol>
 <blockquote>
 <p><strong>Tip:</strong> You can download <em>any</em> template’s CSV, copy rows across files and
 reuse them later; IDs are preserved.</p>
 </blockquote>
-<hr />
 <h2 id="5-webhooks-logs">5 — Webhooks &amp; Logs</h2>
 <p><img alt="Webhooks" src="../../assets/images/webhooks-overview.png" /></p>
 <ul>
@@ -1240,7 +1283,6 @@ reuse them later; IDs are preserved.</p>
   timeout and optional auth header.</li>
 <li>Built‑in log viewer with code/filter/search to track success and failures.</li>
 </ul>
-<hr />
 <h2 id="6-power-navigation-cheatsheet">6 — Power navigation cheatsheet</h2>
 <table>
 <thead>
@@ -1279,7 +1321,6 @@ reuse them later; IDs are preserved.</p>
 <blockquote>
 <p><strong>Shift Esc</strong> closes any modal/dialog instantly.</p>
 </blockquote>
-<hr />
 <h2 id="7-whats-next">7 — What’s next?</h2>
 <ul>
 <li>Wire <strong>Node‑RED</strong> automations → see <a href="../../deploy/node-red/">Node‑RED Integration</a>.</li>
@@ -1334,13 +1375,13 @@ reuse them later; IDs are preserved.</p>
         
         
           
-          <a href="../faq/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQs &amp; Troubleshooting">
+          <a href="../campaigns/" class="md-footer__link md-footer__link--next" aria-label="Next: Campaigns">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                FAQs & Troubleshooting
+                Campaigns
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1428,7 +1469,7 @@ reuse them later; IDs are preserved.</p>
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

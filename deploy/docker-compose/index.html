@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -809,12 +809,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guide/campaigns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campaigns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guide/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     FAQs & Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started-supporters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started (Supporters)*
     
   </span>
   
@@ -1127,7 +1173,6 @@ wants HTTPS and persistence without managing Kubernetes.</p>
 <blockquote>
 <p><strong>Footprint:</strong> &lt;300 MB RAM when idle, &lt;200 MB compressed image pull.</p>
 </blockquote>
-<hr />
 <h2 id="prerequisites">🧰 Prerequisites</h2>
 <table>
 <thead>
@@ -1170,7 +1215,6 @@ wants HTTPS and persistence without managing Kubernetes.</p>
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="1-bootstrap-env">1 — Bootstrap <strong><code>.env</code></strong></h2>
 <pre><code class="language-bash">cp compose.env .env            # template ships in the repo
 nano .env                       # or your favourite editor
@@ -1203,7 +1247,6 @@ WEBSOCKET_BASE_PING_INTERVAL=
 • <a href="../../config/env-vars/">Environment Variables</a>
 • <a href="../../config/meta-setup/">Meta Credentials Guide</a></p>
 </blockquote>
-<hr />
 <h2 id="2-clone-launch">2 — Clone &amp; Launch</h2>
 <pre><code class="language-bash">git clone https://github.com/Astervia/wacraft.git &amp;&amp; cd wacraft
 
@@ -1236,14 +1279,12 @@ docker compose -f docker-compose.lite.yml up -d   # supporters: remove the `.lit
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="3-first-signin">3 — First sign‑in</h2>
 <pre><code class="language-text">URL   : https://app.example.com
 Login : su@sudo
 Pass  : &lt;value_of_SU_PASSWORD&gt;
 </code></pre>
 <p><em>The UI auto‑detects HTTPS and target host via <code>MAIN_SERVER_URL</code>.</em></p>
-<hr />
 <h2 id="4-operational-commands">4 — Operational commands</h2>
 <table>
 <thead>
@@ -1283,14 +1324,12 @@ Pass  : &lt;value_of_SU_PASSWORD&gt;
 </tr>
 </tbody>
 </table>
-<hr />
 <h2 id="5-upgrades">5 — Upgrades</h2>
 <ol>
 <li><code>git pull</code> to fetch the latest tags.</li>
 <li><code>docker compose pull &amp;&amp; docker compose up -d</code></li>
 </ol>
 <p>Optionally add <a href="https://github.com/containrrr/watchtower">containrrr/watchtower</a> to auto‑update images weekly.</p>
-<hr />
 <h2 id="6-hardening-checklist">6 — Hardening checklist</h2>
 <ul>
 <li>[ ] VM firewalls allow <strong>80/443</strong> from the internet and <strong>80/443/6900</strong> from the VPC.</li>
@@ -1300,7 +1339,6 @@ Pass  : &lt;value_of_SU_PASSWORD&gt;
 <li>[ ] Configure an <strong>uptime monitor</strong> on <code>/healthz</code> (server) and <code>/</code> (client).</li>
 <li>[ ] Verify Meta webhook uses <code>https://api.example.com/webhook-in</code> + the same verify token.</li>
 </ul>
-<hr />
 <h2 id="7-next-steps">7 — Next steps</h2>
 <ul>
 <li>Check the <a href="../../guide/ui/">UI Walkthrough</a> to get familiar with the UI and resources.</li>
@@ -1449,7 +1487,7 @@ Pass  : &lt;value_of_SU_PASSWORD&gt;
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

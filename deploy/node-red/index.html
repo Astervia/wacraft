@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.13">
     
     
       
@@ -800,12 +800,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../guide/campaigns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Campaigns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../guide/faq/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     FAQs & Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started-supporters/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started (Supporters)*
     
   </span>
   
@@ -1110,10 +1156,9 @@ receive the <code>wacraft‑nodered</code> image and source code.</p>
 <p>Automate WhatsApp conversations with <strong>visual flows</strong>: trigger on inbound
 messages, call external APIs, and send interactive replies – all without
 writing Go or JavaScript.</p>
-<hr />
-<h2 id="1-how-it-works">1 — How it works</h2>
+<h2 id="1-how-it-works">1 — How it works</h2>
 <pre><code>┌────────────┐    Webhook  ┌──────────────┐  REST/WS   ┌─────────────┐
-│  WhatsApp  │ ───────────&gt;│wacraft‑server│──────────-&gt;│  Node‑RED   │
+│  WhatsApp  │────────────&gt;│wacraft‑server│───────────&gt;│  Node‑RED   │
 │  Cloud API │             │     (Go)     │            │  Flows      │
 └────────────┘             └──────────────┘&lt;───────────┤             │
         ▲                       ▲   ▲   ▲    HTTP      │   Any DB/   │
@@ -1125,9 +1170,8 @@ writing Go or JavaScript.</p>
 <code>SU_PASSWORD</code> over HTTPS. Custom nodes (<code>wait‑text‑message‑match</code>,
 <code>respond‑with‑text</code>, etc.) wrap the wacraft REST endpoints, turning low‑level
 JSON calls into drag‑and‑drop blocks.</p>
-<hr />
-<h2 id="2-deploy">2 — Deploy</h2>
-<h3 id="21-standalone-docker">2.1 Standalone Docker</h3>
+<h2 id="2-deploy">2 — Deploy</h2>
+<h3 id="21-standalone-docker">2.1 Standalone Docker</h3>
 <pre><code class="language-bash">docker run -d --name wacraft-nodered \
   -e SU_PASSWORD=&lt;SU_PASSWORD&gt; \
   -e SERVER_HOST=https://api.example.com \
@@ -1163,105 +1207,101 @@ JSON calls into drag‑and‑drop blocks.</p>
 <pre><code class="language-bash">docker compose up -d --build nodered
 </code></pre>
 <p>Node‑RED UI → <code>https://nodered.example.com</code> (or <code>:1880</code> if local).</p>
-<hr />
-<h2 id="3-first-flow-receive-message">3 — First flow: <strong>receive message</strong></h2>
+<h2 id="3-first-flow-receive-message">3 — First flow: <strong>receive message</strong></h2>
 <ol>
 <li>Log in to the <strong>wacraft UI</strong> → <strong>Automations</strong>.</li>
 <li>Click <strong>➕</strong> → <strong>Import</strong> and paste the JSON below.</li>
 <li>Deploy.</li>
 </ol>
 <pre><code class="language-json">[
-  {
-    &quot;id&quot;: &quot;0ff445d6d247a50e&quot;,
-    &quot;type&quot;: &quot;tab&quot;,
-    &quot;label&quot;: &quot;Receive WhatsApp message&quot;,
-    &quot;disabled&quot;: false,
-    &quot;info&quot;: &quot;&quot;
-  },
-  {
-    &quot;id&quot;: &quot;77466c5e3382df81&quot;,
-    &quot;type&quot;: &quot;http in&quot;,
-    &quot;z&quot;: &quot;0ff445d6d247a50e&quot;,
-    &quot;name&quot;: &quot;Receive endpoint&quot;,
-    &quot;url&quot;: &quot;/webhook-in/whatsapp/message/receive&quot;,
-    &quot;method&quot;: &quot;post&quot;,
-    &quot;upload&quot;: false,
-    &quot;swaggerDoc&quot;: &quot;&quot;
-  },
-  {
-    &quot;id&quot;: &quot;046026af5a9c6dd4&quot;,
-    &quot;type&quot;: &quot;http response&quot;,
-    &quot;z&quot;: &quot;0ff445d6d247a50e&quot;,
-    &quot;name&quot;: &quot;Success&quot;,
-    &quot;statusCode&quot;: &quot;200&quot;
-  },
-  {
-    &quot;id&quot;: &quot;c122c47566ca712b&quot;,
-    &quot;type&quot;: &quot;link out&quot;,
-    &quot;z&quot;: &quot;0ff445d6d247a50e&quot;,
-    &quot;name&quot;: &quot;receive&quot;,
-    &quot;mode&quot;: &quot;link&quot;,
-    &quot;links&quot;: [&quot;aac9a9ba20bedf67&quot;]
-  },
-  {
-    &quot;id&quot;: &quot;95014bee9298fe9d&quot;,
-    &quot;type&quot;: &quot;link in&quot;,
-    &quot;z&quot;: &quot;0ff445d6d247a50e&quot;,
-    &quot;name&quot;: &quot;response&quot;,
-    &quot;links&quot;: [&quot;45be4f514ab7f204&quot;]
-  }
+    {
+        &quot;id&quot;: &quot;0ff445d6d247a50e&quot;,
+        &quot;type&quot;: &quot;tab&quot;,
+        &quot;label&quot;: &quot;Receive WhatsApp message&quot;,
+        &quot;disabled&quot;: false,
+        &quot;info&quot;: &quot;&quot;
+    },
+    {
+        &quot;id&quot;: &quot;77466c5e3382df81&quot;,
+        &quot;type&quot;: &quot;http in&quot;,
+        &quot;z&quot;: &quot;0ff445d6d247a50e&quot;,
+        &quot;name&quot;: &quot;Receive endpoint&quot;,
+        &quot;url&quot;: &quot;/webhook-in/whatsapp/message/receive&quot;,
+        &quot;method&quot;: &quot;post&quot;,
+        &quot;upload&quot;: false,
+        &quot;swaggerDoc&quot;: &quot;&quot;
+    },
+    {
+        &quot;id&quot;: &quot;046026af5a9c6dd4&quot;,
+        &quot;type&quot;: &quot;http response&quot;,
+        &quot;z&quot;: &quot;0ff445d6d247a50e&quot;,
+        &quot;name&quot;: &quot;Success&quot;,
+        &quot;statusCode&quot;: &quot;200&quot;
+    },
+    {
+        &quot;id&quot;: &quot;c122c47566ca712b&quot;,
+        &quot;type&quot;: &quot;link out&quot;,
+        &quot;z&quot;: &quot;0ff445d6d247a50e&quot;,
+        &quot;name&quot;: &quot;receive&quot;,
+        &quot;mode&quot;: &quot;link&quot;,
+        &quot;links&quot;: [&quot;aac9a9ba20bedf67&quot;]
+    },
+    {
+        &quot;id&quot;: &quot;95014bee9298fe9d&quot;,
+        &quot;type&quot;: &quot;link in&quot;,
+        &quot;z&quot;: &quot;0ff445d6d247a50e&quot;,
+        &quot;name&quot;: &quot;response&quot;,
+        &quot;links&quot;: [&quot;45be4f514ab7f204&quot;]
+    }
 ]
 </code></pre>
 <p><img alt="Receive flow" src="../../assets/images/receive-message-nodered-flow.png" /></p>
 <p>Register the webhook in <strong>wacraft → Webhooks</strong> pointing to:
 <code>https://nodered.example.com/webhook-in/whatsapp/message/receive</code>.</p>
-<hr />
-<h2 id="4-ping-pong-example">4 — Ping → Pong example</h2>
+<h2 id="4-ping-pong-example">4 — Ping → Pong example</h2>
 <p>Import the second flow to auto‑reply "pong" whenever a user sends "ping".</p>
 <pre><code class="language-json">[
-  {
-    &quot;id&quot;: &quot;4cf16c53f88e1ecc&quot;,
-    &quot;type&quot;: &quot;tab&quot;,
-    &quot;label&quot;: &quot;Send pong on ping&quot;
-  },
-  {
-    &quot;id&quot;: &quot;aac9a9ba20bedf67&quot;,
-    &quot;type&quot;: &quot;link in&quot;,
-    &quot;z&quot;: &quot;4cf16c53f88e1ecc&quot;,
-    &quot;links&quot;: [&quot;c122c47566ca712b&quot;]
-  },
-  {
-    &quot;id&quot;: &quot;78c14e9ddab5c294&quot;,
-    &quot;type&quot;: &quot;wait-text-message-match&quot;,
-    &quot;z&quot;: &quot;4cf16c53f88e1ecc&quot;,
-    &quot;name&quot;: &quot;Check ping&quot;,
-    &quot;desiredText&quot;: &quot;ping&quot;
-  },
-  {
-    &quot;id&quot;: &quot;7f1b6653728520e7&quot;,
-    &quot;type&quot;: &quot;respond-with-text&quot;,
-    &quot;z&quot;: &quot;4cf16c53f88e1ecc&quot;,
-    &quot;name&quot;: &quot;Answer with pong&quot;,
-    &quot;text&quot;: &quot;pong&quot;
-  },
-  {
-    &quot;id&quot;: &quot;45be4f514ab7f204&quot;,
-    &quot;type&quot;: &quot;link out&quot;,
-    &quot;z&quot;: &quot;4cf16c53f88e1ecc&quot;,
-    &quot;links&quot;: [&quot;95014bee9298fe9d&quot;]
-  }
+    {
+        &quot;id&quot;: &quot;4cf16c53f88e1ecc&quot;,
+        &quot;type&quot;: &quot;tab&quot;,
+        &quot;label&quot;: &quot;Send pong on ping&quot;
+    },
+    {
+        &quot;id&quot;: &quot;aac9a9ba20bedf67&quot;,
+        &quot;type&quot;: &quot;link in&quot;,
+        &quot;z&quot;: &quot;4cf16c53f88e1ecc&quot;,
+        &quot;links&quot;: [&quot;c122c47566ca712b&quot;]
+    },
+    {
+        &quot;id&quot;: &quot;78c14e9ddab5c294&quot;,
+        &quot;type&quot;: &quot;wait-text-message-match&quot;,
+        &quot;z&quot;: &quot;4cf16c53f88e1ecc&quot;,
+        &quot;name&quot;: &quot;Check ping&quot;,
+        &quot;desiredText&quot;: &quot;ping&quot;
+    },
+    {
+        &quot;id&quot;: &quot;7f1b6653728520e7&quot;,
+        &quot;type&quot;: &quot;respond-with-text&quot;,
+        &quot;z&quot;: &quot;4cf16c53f88e1ecc&quot;,
+        &quot;name&quot;: &quot;Answer with pong&quot;,
+        &quot;text&quot;: &quot;pong&quot;
+    },
+    {
+        &quot;id&quot;: &quot;45be4f514ab7f204&quot;,
+        &quot;type&quot;: &quot;link out&quot;,
+        &quot;z&quot;: &quot;4cf16c53f88e1ecc&quot;,
+        &quot;links&quot;: [&quot;95014bee9298fe9d&quot;]
+    }
 ]
 </code></pre>
 <p><img alt="Ping‑pong flow" src="../../assets/images/nodered-pingpong-flow.png" /></p>
 <p>Send <strong>ping</strong> from WhatsApp; receive <strong>pong</strong> back – congrats! 🎉</p>
-<hr />
-<h2 id="5-available-nodes-cheatsheet">5 — Available nodes (cheat‑sheet)</h2>
-<p>Full reference lives inside Node‑RED → <strong>Wacraft Nodes</strong> panel.</p>
-<hr />
-<h2 id="6-support-customisation">6 — Support &amp; customisation</h2>
+<h2 id="5-available-nodes-cheatsheet">5 — Available nodes (cheat‑sheet)</h2>
+<p>Full reference lives inside Node‑RED → <strong>Wacraft Nodes</strong> panel.</p>
+<h2 id="6-support-customisation">6 — Support &amp; customisation</h2>
 <ul>
 <li><strong>Contact:</strong> <a href="mailto:wacraft@astervia.tech">wacraft@astervia.tech</a></li>
-<li><strong>Repo (only for supporters):</strong> <a href="https://github.com/Astervia/wacraft-nodered">https://github.com/Astervia/wacraft-nodered</a></li>
+<li><strong>Repo (only for supporters):</strong> <a href="https://github.com/Astervia/wacraft-node-red-defaults">https://github.com/Astervia/wacraft-node-red-defaults</a></li>
 <li>We can tailor nodes, build high‑scale deployments, or review your flows.</li>
 </ul>
 <p>Enjoy building no‑code automations! ✨</p>
@@ -1405,7 +1445,7 @@ JSON calls into drag‑and‑drop blocks.</p>
       <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "navigation.footer"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

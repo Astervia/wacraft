@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://wacraft.astervia.tech/deploy/overview/">
+        <link rel="canonical" href="https://wacraft.astervia.tech/guide/campaigns/">
       
       
-        <link rel="prev" href="../../config/webhook-setup/">
+        <link rel="prev" href="../ui/">
       
       
-        <link rel="next" href="../docker-compose/">
+        <link rel="next" href="../faq/">
       
       
       <link rel="icon" href="../../assets/images/icon-nobg.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Deployment Overview - wacraft</title>
+        <title>Campaigns - wacraft</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deployment-overview" class="md-skip">
+        <a href="#campaigns" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deployment Overview
+              Campaigns
             
           </span>
         </div>
@@ -454,20 +454,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -483,7 +481,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Deployment Guides
@@ -494,32 +492,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Deployment Overview
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../deploy/overview/" class="md-nav__link">
         
   
   
@@ -530,71 +506,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-docker-compose-recommended-for-most" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 — Docker Compose (recommended for most)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-binary-server-vercel-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      2 — Binary Server + Vercel UI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-helm-chart-alpha" class="md-nav__link">
-    <span class="md-ellipsis">
-      3 — Helm Chart (alpha)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-custom-enterprise-deployments" class="md-nav__link">
-    <span class="md-ellipsis">
-      4 — Custom &amp; Enterprise deployments
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Decision tree
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -607,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docker-compose/" class="md-nav__link">
+      <a href="../../deploy/docker-compose/" class="md-nav__link">
         
   
   
@@ -630,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../binary-vercel/" class="md-nav__link">
+      <a href="../../deploy/binary-vercel/" class="md-nav__link">
         
   
   
@@ -653,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../node-red/" class="md-nav__link">
+      <a href="../../deploy/node-red/" class="md-nav__link">
         
   
   
@@ -680,18 +591,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -707,7 +620,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Usage Guide
@@ -721,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guide/overview/" class="md-nav__link">
+      <a href="../overview/" class="md-nav__link">
         
   
   
@@ -744,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guide/ui/" class="md-nav__link">
+      <a href="../ui/" class="md-nav__link">
         
   
   
@@ -764,10 +677,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../guide/campaigns/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -778,6 +700,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -790,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guide/faq/" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         
   
   
@@ -813,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started-supporters/" class="md-nav__link">
+      <a href="../../deploy/getting-started-supporters/" class="md-nav__link">
         
   
   
@@ -1015,59 +938,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-docker-compose-recommended-for-most" class="md-nav__link">
-    <span class="md-ellipsis">
-      1 — Docker Compose (recommended for most)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-binary-server-vercel-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      2 — Binary Server + Vercel UI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-helm-chart-alpha" class="md-nav__link">
-    <span class="md-ellipsis">
-      3 — Helm Chart (alpha)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-custom-enterprise-deployments" class="md-nav__link">
-    <span class="md-ellipsis">
-      4 — Custom &amp; Enterprise deployments
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decision-tree" class="md-nav__link">
-    <span class="md-ellipsis">
-      Decision tree
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1082,94 +952,181 @@
 
 
 
-<h1 id="deployment-overview">🚀 Deployment Overview</h1>
-<p>Choose the flavour that fits <strong>your scale, budget, and ops skillset</strong>. Every
-method ships the same codebase – only the packaging differs.</p>
-<table>
-<thead>
-<tr>
-<th>Scenario</th>
-<th>Footprint</th>
-<th>Stack file / Guide</th>
-<th>Ideal for</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Quick demo / Small production / single VM prod</strong></td>
-<td>2 vCPU / 2 GB</td>
-<td><a href="../docker-compose/">Compose Stack Deployment</a></td>
-<td>Solo founders, staging, hack‑days</td>
-</tr>
-<tr>
-<td><strong>No Docker, cheap VM</strong></td>
-<td>512 MB RAM (server)</td>
-<td><a href="../binary-vercel/">Binary + Vercel</a></td>
-<td>Serverless believers, minimalists</td>
-</tr>
-<tr>
-<td><strong>Bring‑your‑own Kubernetes</strong></td>
-<td>any</td>
-<td><em>Helm chart (alpha)</em></td>
-<td>Teams with existing K8s CI/CD</td>
-</tr>
-<tr>
-<td><strong>Air‑gapped / on‑prem</strong></td>
-<td>custom</td>
-<td>*Manual *.deb / .rpm</td>
-<td>Enterprises with strict compliance</td>
-</tr>
-</tbody>
-</table>
+<h1 id="campaigns">Campaigns</h1>
 <blockquote>
-<p>All images are multi‑arch (x86‑64, arm64). Choose AMD 64 droplet, Apple M1 or
-Raspberry Pi ‑ the tags remain identical (e.g. <code>v0.1.0</code>).</p>
+<p><strong>Supporter‑only feature</strong> – unlock via the <a href="../../support/plans/">support plans</a> to
+receive the source code with this feature.</p>
 </blockquote>
-<h2 id="1-docker-compose-recommended-for-most">1 — Docker Compose (recommended for most)</h2>
-<p><strong>Pros</strong>: one‑liner setup, batteries included (Postgres, UI).
-<strong>Cons</strong>: single‑host; horizontal scaling requires external DB &amp; LB.</p>
-<pre><code class="language-bash">git clone https://github.com/Astervia/wacraft.git
-cp compose.env .env
-# pick lite OR prod file
-docker compose -f docker-compose.yml up -d
-</code></pre>
-<p>Read the full guide → <a href="../docker-compose/">Compose Stack Deployment</a>.</p>
-<h2 id="2-binary-server-vercel-ui">2 — Binary Server + Vercel UI</h2>
-<p>Compile (or download) the <strong>static Go binary</strong>, run under systemd, and host the
-Angular build on Vercel’s CDN.</p>
-<p>Guide → <a href="../binary-vercel/">Binary + Vercel</a>.</p>
-<h2 id="3-helm-chart-alpha">3 — Helm Chart (alpha)</h2>
-<p>For teams already on <strong>EKS, GKE, AKS</strong>. Operator pattern, HPA examples and
-private registry support are on the roadmap. Contact us if you’d like to pilot
-this.</p>
-<h2 id="4-custom-enterprise-deployments">4 — Custom &amp; Enterprise deployments</h2>
-<p>Need multi‑region HA, private VPCs, Terraform pipelines, or on‑prem
-installation? <strong>Astervia</strong> offers hands‑on consultancy:</p>
-<table>
-<thead>
-<tr>
-<th>Plan</th>
-<th>What you get</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong><a href="../../support/plans/">Plan <em>Supernova</em> – Enterprise</a></strong></td>
-<td>Architecture review, infra‑as‑code, CI/CD, tailored forks.</td>
-</tr>
-</tbody>
-</table>
-<p>📩 Email <strong><a href="mailto:wacraft@astervia.tech">wacraft@astervia.tech</a></strong> with your requirements and preferred cloud
-( AWS / GCP / Azure / Bare‑metal ). We’ll scope and quote – remember, we <strong>do
-not sell licences</strong>; donations unlock the service tier and source‑access.</p>
-<h2 id="decision-tree">Decision tree</h2>
+<p>Campaigns allow you to send bulk messages to users. You can send any kind of message, but be aware of the 24 hour conversation limit when sending non template messages.</p>
+<p>To create a campaign you need to have an active deployment. We'll suppose that your frontend is deployed at <a href="https://wacraft.frontend">https://wacraft.frontend</a></p>
+<p>First, go to <a href="https://wacraft.frontend/en/home?sidebar_open=true#campaigns">https://wacraft.frontend/en/home?sidebar_open=true#campaigns</a> and click the plust icon to create a new campaign.</p>
+<p><img alt="Create campaign" src="../../assets/images/create-campaign.png" /></p>
+<p>Choose a beautiful name, click save and you created your first campaign! You should be in your campaign page. And see all campaigns at the left navbar.</p>
+<p><img alt="Created campaign" src="../../assets/images/created-campaign.png" /></p>
+<p>Now you need to add messages to your campaign. There are two ways of adding messages:</p>
 <ol>
-<li><strong>Need it live in 10 min?</strong> → Docker Compose Lite.</li>
-<li><strong>Already have Vercel + VM?</strong> → Binary + Vercel.</li>
-<li><strong>You’re a DevOps team on K8s?</strong> → Helm.</li>
-<li><strong>Compliance or exotic scale?</strong> → Contact us.</li>
+<li>You can download a template csv and fill it out;</li>
+<li>You can add raw json data.</li>
 </ol>
-<p>Happy shipping 🔧</p>
+<p>We recomend you to use the campaign feature to bulk send templates, so the option 1 is our sugestion.</p>
+<p><img alt="Add messages to campaign" src="../../assets/images/add-messages-to-campaign.png" /></p>
+<p>To add raw json data, simply select JSON and add an array of raw data to send whatsapp messages. An example is:</p>
+<pre><code class="language-json">[
+    {
+        &quot;recipient_type&quot;: &quot;individual&quot;,
+        &quot;messaging_product&quot;: &quot;whatsapp&quot;,
+        &quot;to&quot;: &quot;999999999999&quot;,
+        &quot;type&quot;: &quot;template&quot;,
+        &quot;template&quot;: {
+            &quot;name&quot;: &quot;hello_world&quot;,
+            &quot;language&quot;: {
+                &quot;code&quot;: &quot;en_US&quot;
+            },
+            &quot;components&quot;: []
+        }
+    },
+    {
+        &quot;recipient_type&quot;: &quot;individual&quot;,
+        &quot;messaging_product&quot;: &quot;whatsapp&quot;,
+        &quot;to&quot;: &quot;999999999999&quot;,
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;text&quot;: {
+            &quot;preview_url&quot;: true,
+            &quot;body&quot;: &quot;Hey!&quot;
+        }
+    }
+]
+</code></pre>
+<p>The expected json is an array of elements that represent an whatsapp message. You can check the proper format at <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages">Meta reference</a>.
+One option to easily get the message object is send the message using the chats page, then you click on message options -&gt; Message data</p>
+<p><img alt="Message data example" src="../../assets/images/message-data.png" /></p>
+<p>And you will see the message raw data. Copy it and extract the <code>sender_data</code> part. This is the json that you can use on campaigns to send this message. You only have to change the <code>to</code> field to the proper contact.</p>
+<p>To add messages via csv you first have to copy the csv template for the WhatsApp template you want to send. Here's an example with <code>hello_world</code> template:</p>
+<ol>
+<li>Go to the <a href="https://wacraft.frontend/en/home?sidebar_open=true#templates">templates page</a></li>
+<li>Select the template you want: we'll use <a href="https://wacraft.frontend/en/home?sidebar_open=false&amp;template.name=hello_world#templates"><code>hello_world</code></a></li>
+<li>Copy the template csv
+   <img alt="Copy template CSV" src="../../assets/images/copy-template-csv.png" /></li>
+<li>
+<p>Fill the csv
+   CSV content example</p>
+<p><code>csv
+messaging_product,recipient_type,to,type,template.name,template.language.code,template.components
+whatsapp,individual,9999999999,template,hello_world,en_US,[]
+whatsapp,individual,9999999999,template,hello_world,en_US,[]</code></p>
+</li>
+<li>
+<p>Upload the file at the campaing and click to add messages</p>
+</li>
+</ol>
+<p>Once you add your messages you'll be able to send them inside the campaign. At the bottom of the campaign page you can see all the messages that you just added.
+After clicking the button to send you must wait for all messages to be processed and see a graphic like this:</p>
+<p><img alt="Campaign progress" src="../../assets/images/campaign-progress.png" /></p>
+<p>[describe the graphic here]</p>
+<p>And you sent your first campaign. You can see errors if any within the messages at the bottom of the page.</p>
+<p>Disclaimer: although some messages not fail, WhatsApp can refuse to send some messages after some time because of your account limitations or other restrictions. Hence you should check the status of the messages after some time in the chats page.</p>
+<h1 id="campaigns-guide">🚀 Campaigns Guide</h1>
+<blockquote>
+<p><strong>Supporter‑only feature</strong> – This feature is unlocked for our supporters. Please see the <a href="https://www.google.com/search?q=../support/plans.md">support plans</a> to learn more.</p>
+</blockquote>
+<p>Campaigns are a powerful tool for sending bulk messages to your contacts. You can send any type of message, but it's important to be aware of WhatsApp's 24-hour conversation window. You can only <strong>initiate</strong> a conversation with a template message. Non-template messages can only be sent to users who have contacted you in the last 24 hours.</p>
+<p>This guide will walk you through creating and sending your first campaign.</p>
+<h3 id="step-1-create-the-campaign">Step 1: Create the Campaign</h3>
+<p>First, navigate to the <strong>Campaigns</strong> section from the main sidebar.</p>
+<ol>
+<li>
+<p>Click the <strong>+</strong> icon at the top of the campaigns list to begin.</p>
+</li>
+<li>
+<p>Give your campaign a descriptive name, like "New Feature Announcement," and click <strong>Save</strong>.</p>
+</li>
+</ol>
+<p>You have now created your campaign! You will land on its main dashboard.</p>
+<h3 id="step-2-add-messages-to-your-campaign">Step 2: Add Messages to Your Campaign</h3>
+<p>There are two ways to add messages to a campaign: uploading a pre-filled <strong>CSV file (recommended)</strong> or providing raw <strong>JSON data (advanced)</strong>.</p>
+<h4 id="method-1-using-a-csv-file-recommended">Method 1: Using a CSV File (Recommended)</h4>
+<p>This is the easiest way to send a bulk campaign based on an approved WhatsApp template.</p>
+<ol>
+<li>
+<p>Navigate to the <strong>Templates</strong> page and select the template you wish to use, such as <code>hello_world</code>.</p>
+</li>
+<li>
+<p>In the template details view, click the <strong>CSV icon</strong> to download a CSV file formatted specifically for this template.</p>
+</li>
+<li>
+<p>Open the downloaded file and populate the <code>to</code> column with your contacts' phone numbers. If your template has variables, there will be additional columns to fill.</p>
+<p><strong>Example CSV Content:</strong></p>
+<p><code>csv
+messaging_product,recipient_type,to,type,template.name,template.language.code,template.components
+whatsapp,individual,5511999999999,template,hello_world,en_US,[]
+whatsapp,individual,5521888888888,template,hello_world,en_US,[]</code></p>
+</li>
+<li>
+<p>Save the CSV and return to your campaign dashboard. In the <strong>Add messages to campaign</strong> section, drag and drop or upload your completed file.</p>
+</li>
+</ol>
+<h4 id="method-2-using-raw-json-advanced">Method 2: Using Raw JSON (Advanced)</h4>
+<p>This method offers more flexibility and allows for sending non-template messages (within the 24-hour window).</p>
+<ol>
+<li>
+<p>In the <strong>Add messages to campaign</strong> section, select <strong>JSON</strong> from the dropdown.</p>
+</li>
+<li>
+<p>Paste an array of message objects into the text field. You can find the required format in the <a href="https://developers.facebook.com/docs/whatsapp/cloud-api/guides/send-messages">Meta API Reference</a>.</p>
+<p><strong>Example JSON Array:</strong></p>
+<p><code>json
+[
+    {
+        "recipient_type": "individual",
+        "messaging_product": "whatsapp",
+        "to": "5511999999999",
+        "type": "template",
+        "template": {
+            "name": "hello_world",
+            "language": {
+                "code": "en_US"
+            },
+            "components": []
+        }
+    },
+    {
+        "recipient_type": "individual",
+        "messaging_product": "whatsapp",
+        "to": "5521888888888",
+        "type": "text",
+        "text": {
+            "preview_url": true,
+            "body": "Hey!"
+        }
+    }
+]</code></p>
+<p><strong>Tip:</strong> A quick way to get the correct JSON for a specific message is to send it once from the <strong>Chats</strong> page, then click on the message options and select <strong>Message data</strong>. You can then copy the <code>sender_data</code> object and modify the <code>to</code> field.</p>
+</li>
+</ol>
+<h3 id="step-3-send-and-monitor-your-campaign">Step 3: Send and Monitor Your Campaign</h3>
+<p>After uploading your messages (via CSV or JSON), they will appear in a list at the bottom of the campaign page.</p>
+<ol>
+<li>
+<p>Review the messages to ensure they are correct.</p>
+</li>
+<li>
+<p>When you're ready, click the blue <strong>Send (▶️)</strong> button.</p>
+</li>
+<li>
+<p>Wait for the messages to be processed. A progress graph will appear, giving you a real-time overview.</p>
+</li>
+</ol>
+<p>The progress graph displays:</p>
+<ul>
+<li><strong>Total</strong>: The total number of messages in the batch.</li>
+<li><strong>Handled</strong>: How many messages the server has attempted to send.</li>
+<li><strong>Successes</strong>: Messages that were successfully sent to the WhatsApp API.</li>
+<li><strong>Errors</strong>: Messages that failed to send. You can see specific error details in the message list below the graph.</li>
+</ul>
+<p>Congratulations, you've sent your first campaign!</p>
+<blockquote>
+<p><strong>Disclaimer:</strong> A "success" in the progress chart indicates that the message was accepted by Meta's API. However, final delivery can still be affected by WhatsApp's policies or your account status. For definitive delivery confirmation, always check the message status in the <strong>Chats</strong> page after some time.</p>
+</blockquote>
 
 
 
@@ -1199,7 +1156,7 @@ not sell licences</strong>; donations unlock the service tier and source‑acces
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../../config/webhook-setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Webhook Setup">
+          <a href="../ui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UI Walkthrough">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1209,20 +1166,20 @@ not sell licences</strong>; donations unlock the service tier and source‑acces
                 Previous
               </span>
               <div class="md-ellipsis">
-                Webhook Setup
+                UI Walkthrough
               </div>
             </div>
           </a>
         
         
           
-          <a href="../docker-compose/" class="md-footer__link md-footer__link--next" aria-label="Next: Docker Compose">
+          <a href="../faq/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQs &amp; Troubleshooting">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Docker Compose
+                FAQs & Troubleshooting
               </div>
             </div>
             <div class="md-footer__button md-icon">
