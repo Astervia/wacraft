@@ -59,6 +59,7 @@ nav:
           - UI Walkthrough: guide/ui.md
           - Campaigns: guide/campaigns.md
           - FAQs & Troubleshooting: guide/faq.md
+          - Getting Started (Supporters)*: deploy/getting-started-supporters.md
     - Reference:
           # - API (auto‑generated): reference/api.md          # embed/redoc‑html export
           - Changelog: reference/changelog.md

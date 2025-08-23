@@ -1,9 +1,7 @@
 # Getting Meta Credentials
 
-> Collect the **four** variables wacraft needs to talk to WhatsApp Cloud API:  
+> Collect the **four** variables wacraft needs to talk to WhatsApp Cloud API:
 > `META_APP_SECRET`, `WABA_ACCOUNT_ID`, `WABA_ID` and **`WABA_ACCESS_TOKEN`** (permanent).
-
----
 
 ## 1 — Create a Business‑type Meta App & copy `META_APP_SECRET`
 
@@ -13,8 +11,6 @@
 ```env
 META_APP_SECRET=PASTE_ME
 ```
-
----
 
 ## 2 — Enable WhatsApp & grab `WABA_ACCOUNT_ID`
 
@@ -26,8 +22,6 @@ WABA_ACCOUNT_ID=PASTE_ME
 ```
 
 _(You can always find it again in **Business Settings → Accounts → WhatsApp Accounts**.)_
-
----
 
 ## 3 — Find the Phone Number ID (`WABA_ID`)
 
@@ -48,13 +42,11 @@ The returned `id` is the **Phone Number ID**. ([Facebook Developers][5])
 WABA_ID=PASTE_ME
 ```
 
----
-
 ## 4 — Generate a Permanent `WABA_ACCESS_TOKEN`
 
 Short‑lived sandbox tokens expire after 24 h; create a never‑expiring one via **System Users**.
 
-1. Open **Business Settings** (nine‑dot launcher → _Business Settings_). ([Facebook Developers][6])
+1. Open **Business Settings** (nine‑dot launcher → *Business Settings*). ([Facebook Developers][6])
 2. Under **Users**, select **System Users** → **Add** → choose **Admin**. ([Facebook Developers][6])
 3. With the new system user selected, click **Add Assets** and grant _Full Control_ to **both** your **App** and your **WhatsApp Business Account**. ([Facebook Developers][6])
 4. Press **Generate Token**, pick your app, tick scopes **`whatsapp_business_messaging`** and **`whatsapp_business_management`**, then generate. ([Stack Overflow][7])
@@ -66,8 +58,6 @@ WABA_ACCESS_TOKEN=PASTE_ME   # never expires
 
 > **Keep it secret!** Anyone with this token can message from your number. Rotate only via System Users. ([Facebook Developers][6])
 
----
-
 ## ✅ Checklist
 
 | Variable            | Where you found it                                    |
@@ -76,8 +66,6 @@ WABA_ACCESS_TOKEN=PASTE_ME   # never expires
 | `WABA_ACCOUNT_ID`   | **WhatsApp API Setup banner**                         |
 | `WABA_ID`           | **Phone Number ID** line _or_ Graph API call          |
 | `WABA_ACCESS_TOKEN` | **Business Settings → System Users → Generate Token** |
-
----
 
 > **Next page:** [Env Vars Overview](./env-vars.md) — configure all environment variables.
 

@@ -15,8 +15,6 @@ You can support us outside a plan with other values in the same addresses.
 > **Supernova is bespoke** – we scope your needs first, then you donate. Email
 > [wacraft@astervia.tech](mailto:wacraft@astervia.tech) and we’ll draft a statement of work.
 
----
-
 ## 💸 How to donate
 
 ### Bitcoin (on‑chain)
@@ -33,8 +31,6 @@ evilpantry77@walletofsatoshi.com
 
 _Send any amount; we map the USD equivalent at the **daily Coinbase BTC‑USD
 rate** when the transaction confirms._
-
----
 
 ### After donating
 

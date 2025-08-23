@@ -54,8 +54,6 @@ WEBSOCKET_BASE_PING_INTERVAL=
 > • [Environment Variables](../config/env-vars.md)
 > • [Meta Credentials Guide](../config/meta-setup.md)
 
----
-
 ## 2 — Clone & Launch
 
 ```bash
@@ -76,8 +74,6 @@ docker compose -f docker-compose.lite.yml up -d   # supporters: remove the `.lit
 | **client** | Angular UI served by Nginx (compiled on first boot).        |
 | **db**     | `postgres:16‑alpine` with a named volume `wacraft_db_data`. |
 
----
-
 ## 3 — First sign‑in
 
 ```text
@@ -87,8 +83,6 @@ Pass  : <value_of_SU_PASSWORD>
 ```
 
 _The UI auto‑detects HTTPS and target host via `MAIN_SERVER_URL`._
-
----
 
 ## 4 — Operational commands
 
@@ -102,16 +96,12 @@ _The UI auto‑detects HTTPS and target host via `MAIN_SERVER_URL`._
 | Stop stack (persist volumes)     | `docker compose down`                                              |
 | Nuke all data (⚠️ prod!)         | `docker compose down -v`                                           |
 
----
-
 ## 5 — Upgrades
 
 1. `git pull` to fetch the latest tags.
 2. `docker compose pull && docker compose up -d`
 
 Optionally add [containrrr/watchtower](https://github.com/containrrr/watchtower) to auto‑update images weekly.
-
----
 
 ## 6 — Hardening checklist
 
@@ -121,8 +111,6 @@ Optionally add [containrrr/watchtower](https://github.com/containrrr/watchtower)
 - [ ] Snapshot `wacraft_db_data` nightly (cron or provider snapshot).
 - [ ] Configure an **uptime monitor** on `/healthz` (server) and `/` (client).
 - [ ] Verify Meta webhook uses `https://api.example.com/webhook-in` + the same verify token.
-
----
 
 ## 7 — Next steps
 

@@ -3,8 +3,6 @@
 This guide ships **one wacraft‑server** (Go API + webhooks) inside Docker and hosts the Angular UI on **Vercel**.
 Result: a fully HTTPS‑secured stack reachable at `https://app.example.com` with the API on `https://api.example.com`.
 
----
-
 ## 🧰 Prerequisites
 
 | What                | Minimum                              | Notes                                                                  |
@@ -13,8 +11,6 @@ Result: a fully HTTPS‑secured stack reachable at `https://app.example.com` wit
 | TLS cert            | Let’s Encrypt or managed LB          | Terminate HTTPS before traffic reaches the container.                  |
 | PostgreSQL          | 14 +                                 | Cloud‑managed (RDS, Cloud SQL, Azure DB) **or** self‑hosted container. |
 | WhatsApp Meta creds | WABA_ID, WABA_ACCOUNT_ID, etc.       | From [meta‑setup.md](../config/meta-setup.md).                         |
-
----
 
 ## 1 — Provision PostgreSQL
 
@@ -35,8 +31,6 @@ docker run -d \
 ```
 
 Update the `DATABASE_*` keys accordingly.
-
----
 
 ## 2 — Create the server `.env`
 
@@ -83,8 +77,6 @@ MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS=20
 
 Save as `.env`.
 
----
-
 ## 3 — Run **wacraft‑server** behind a reverse proxy
 
 ### Single `docker run` (quick)
@@ -97,13 +89,12 @@ docker run -d --name wacraft-server \
   astervia/wacraft-server-lite:v0.1.1     # supporters use wacraft-server instead of wacraft-server-lite
 ```
 
----
-
 ## 4 — Deploy the Angular UI to Vercel
 
 1. **Fork** or **import** [https://github.com/Astervia/wacraft-client](https://github.com/Astervia/wacraft-client) in Vercel.
 2. In **Project Settings → Environment Variables** add:
 
+<<<<<<< HEAD
 | Key                            | Value                        |
 | ------------------------------ | ---------------------------- |
 | `IS_LITE`                      | `true` *(supporters: false)* |
@@ -113,17 +104,23 @@ docker run -d --name wacraft-server \
 | `NODE_RED_SERVER_SECURITY`     | _(optional)_                 |
 | `GOOGLE_MAPS_API_KEY`          | _(optional)_                 |
 | `WEBSOCKET_BASE_PING_INTERVAL` | _(optional)_                 |
+=======
+| Key                        | Value                        |
+| -------------------------- | ---------------------------- |
+| `IS_LITE`                  | `true` *(supporters: false)* |
+| `MAIN_SERVER_URL`          | `api.example.com`            |
+| `MAIN_SERVER_SECURITY`     | `true`                       |
+| `NODE_RED_SERVER_URL`      | _(optional)_                 |
+| `NODE_RED_SERVER_SECURITY` | _(optional)_                 |
+| `GOOGLE_MAPS_API_KEY`      | _(optional)_                 |
+>>>>>>> 1ac9907 (refactor: remove `---`)
 
 3. **Build and other configurations** already in repo.
 4. Deploy—Vercel assigns `https://app.example.com` when using custom domain.
 
----
-
 ## 5 — Create Meta Webhook
 
 Follow the [Webhook Setup Guide](../config/webhook-setup.md) to register the callback URL in Meta.
-
----
 
 ## 6 — Checklist
 

@@ -30,14 +30,10 @@ Before setting up the environment variables, make sure you get Meta credentials 
 |                        | `GOOGLE_MAPS_API_KEY`                 | ✕         | _(none)_           | Needed only for location messages; you can omit otherwise.                                                                                    |
 |                        | `WEBSOCKET_BASE_PING_INTERVAL`        | ✕         | `30000`            | Base ping interval in milliseconds for WebSocket connections.                                                                                 |
 
----
-
 ## Production Hardening Tips
 
 - **Keep `.env` out of VCS** – add it to `.gitignore` or store secrets in your CI/CD vault.
 - **Rotate secrets** regularly; replace `JWT_SECRET`, `WABA_ACCESS_TOKEN`, and DB credentials via environment‑specific pipelines.
 - **Override via Docker Compose** – the stack’s `docker‑compose.yml` can supply `env_file` and `environment` entries that shadow values in `.env`. Order matters: later files or inline `environment:` keys win.
-
----
 
 > **Next page:** [Webhook Setup](./webhook-setup.md) — configure an HTTPS tunnel & register your callback URL.

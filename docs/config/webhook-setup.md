@@ -1,11 +1,9 @@
 # Webhook Setup
 
-`wacraft-server` listens for WhatsApp Cloud API events on  
-`http://localhost:6900/webhook‑in`.  
+`wacraft-server` listens for WhatsApp Cloud API events on
+`http://localhost:6900/webhook‑in`.
 Because Meta **only** posts to HTTPS URLs, the setup differs between local
 development and production.
-
----
 
 ## 1 — Local Development
 
@@ -21,8 +19,6 @@ development and production.
 > **Tip** Each new tunnel run changes the public hostname, so you’ll need to
 > update the callback URL whenever you restart your tunnel.
 
----
-
 ## 2 — Production Deployment
 
 | Step                                    | What to do                                                                                                                                                                                                                           |
@@ -33,8 +29,6 @@ development and production.
 | **2.4 Lock down access**                | _Optional but recommended_—allow inbound POSTs to `/webhook-in` only from Meta’s IP ranges.                                                                                                                                          |
 | **2.5 Rotate secrets**                  | Store `WABA_ACCESS_TOKEN`, `META_APP_SECRET`, and `WEBHOOK_VERIFY_TOKEN` in a vault or your CI/CD secret store; reload the service whenever you rotate them.                                                                         |
 | **2.6 Monitor**                         | Set up logging/alerting on 4xx/5xx responses; Meta will pause delivery after repeated failures.                                                                                                                                      |
-
----
 
 ### Variable Recap
 

@@ -4,8 +4,6 @@ Welcome to a quick tour of the **wacraft‑client** interface. This guide covers
 the daily workflow for operators and admins, from chatting with users to
 sending bulk campaigns and wiring automations.
 
----
-
 ## 1 — Layout at a glance
 
 ![Chats UI](../assets/images/chats-ui-with-conversation.png)
@@ -21,8 +19,6 @@ sending bulk campaigns and wiring automations.
 > **Keyboard power‑users:** press **Ctrl /** anywhere to open the shortcut cheat‑sheet.
 
 ![Keyboard shortcuts](../assets/images/keyboard-shortcuts.png)
-
----
 
 ## 2 — Chats & Conversation tools
 
@@ -43,8 +39,6 @@ sending bulk campaigns and wiring automations.
 
 Both panes slide in from the right without leaving the chat context.
 
----
-
 ## 3 — Account & Local settings
 
 ![Account settings](../assets/images/account-settings.png)
@@ -55,8 +49,6 @@ Both panes slide in from the right without leaving the chat context.
 - **Auto preview & mark as read:** tweak message behaviour only for _your_
   browser; doesn’t affect other agents.
 
----
-
 ## 4 — Templates ➡️ CSV ➡️ Campaigns
 
 The fastest way to launch a bulk send is **Template → CSV → Campaign**.
@@ -64,7 +56,7 @@ The fastest way to launch a bulk send is **Template → CSV → Campaign**.
 1. **Open Templates** in the sidebar _(hotkey **4**)_.
    Hover a template and click the **📄 CSV** button.
 
-   ![Template CSV](../assets/images/template-with-csv-button-hover.png)
+    ![Template CSV](../assets/images/template-with-csv-button-hover.png)
 
 2. A CSV is downloaded with the exact variables required by that template.
    _Fill it_: one row per recipient.
@@ -81,15 +73,13 @@ whatsapp,individual,3333333333,template,hello_world,en_US,[]
 
 4. In **Add messages to campaign** drag‑and‑drop the CSV or click to upload.
 
-   ![Campaign upload](../assets/images/campaigns-overview.png)
+    ![Campaign upload](../assets/images/campaigns-overview.png)
 
 5. Review totals, then hit the blue **Send ▶️** button. Status updates live
    (messages sent / unsent). That’s it – campaign en‑route!
 
 > **Tip:** You can download _any_ template’s CSV, copy rows across files and
 > reuse them later; IDs are preserved.
-
----
 
 ## 5 — Webhooks & Logs
 
@@ -98,8 +88,6 @@ whatsapp,individual,3333333333,template,hello_world,en_US,[]
 - Register outbound events (e.g. **receive_whatsapp_message**) with URL,
   timeout and optional auth header.
 - Built‑in log viewer with code/filter/search to track success and failures.
-
----
 
 ## 6 — Power navigation cheatsheet
 
@@ -113,8 +101,6 @@ whatsapp,individual,3333333333,template,hello_world,en_US,[]
 | Open message data         | `Ctrl D`       |
 
 > **Shift Esc** closes any modal/dialog instantly.
-
----
 
 ## 7 — What’s next?
 

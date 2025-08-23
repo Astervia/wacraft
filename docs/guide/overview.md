@@ -5,8 +5,6 @@ battle‑ready API, modern Angular UI, automation nodes for Node‑RED and optio
 cloud tooling. This page gives you the **big‑picture** before you dive into the
 feature‑specific guides.
 
----
-
 ## What’s in the box?
 
 | Layer           | Component                                | Purpose                                                                                                                            |
@@ -19,8 +17,6 @@ feature‑specific guides.
 > **Open‑core**: All core functionality is MIT‑licensed. “Supporter” tiers unlock
 > extra features (analytics dashboards, premium nodes, advanced campaigns).
 
----
-
 ## API Reference
 
 Interactive REST docs live under **`/docs`** of any running server instance.
@@ -31,8 +27,6 @@ _Example:_ `https://api.example.com/docs`
 - Endpoints are versioned; breaking changes bump the API major (e.g. `/v1`).
 - Models reuse the server’s Go structs, so the JSON is always up‑to‑date.
 - Use the auth endpoints do copy your `token` and make requests from the browser. If you are using the Swagger UI, remember to put `Bearer` before the token.
-
----
 
 ## Internationalisation (i18n)
 
@@ -51,8 +45,6 @@ https://app.example.com/pt-BR     # Portuguese UI
 ```
 
 > **Contribute translations!** PRs for additional locales are welcome!
-
----
 
 ## Where to next?
 

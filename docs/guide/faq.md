@@ -4,8 +4,6 @@ A curated list of common questions about **wacraft** – from licensing to
 troubleshooting the WhatsApp Cloud account. Don’t see your question? Email us
 at **[wacraft@astervia.tech](mailto:wacraft@astervia.tech)** and we’ll update this page.
 
----
-
 ## 📦 General
 
 ### What is _wacraft_?
@@ -25,8 +23,6 @@ free forever.
 Donate **X‑Y satoshis** (see [plans](../support/plans.md)). You’ll receive
 Docker credentials + repo access within 24 h.
 
----
-
 ## 🚀 Deployment
 
 ### Fastest way to try it?
@@ -43,8 +39,6 @@ UI on Vercel CDN.
 Astervia offers paid consultancy. Reach out via
 [wacraft@astervia.tech](mailto:wacraft@astervia.tech) with your requirements.
 
----
-
 ## 🔐 Accounts & Permissions
 
 ### Default admin credentials?
@@ -54,8 +48,6 @@ Astervia offers paid consultancy. Reach out via
 ### Can I create agent roles?
 
 RBAC scaffolding is present; detailed roles land in **v0.2**, but when you create a user you already specify a set of roles. For now, create separate JWT tokens for integrations.
-
----
 
 ## 🗄️ Data & Backups
 
@@ -68,8 +60,6 @@ instance). Media is proxied; original files stay in Meta’s CDN.
 
 `docker compose exec db pg_dump -U postgres postgres > backup.sql` or schedule
 managed snapshots in RDS.
-
----
 
 ## 🌐 WhatsApp / Meta Issues
 
@@ -91,16 +81,12 @@ Ensure the callback URL is reachable (`https://api.example.com/webhook-in`) and
 2. Check **Message Status Sync Timeout** in `.env` (default 20 s).
 3. Inspect server logs (`docker compose logs server`).
 
----
-
 ## 🌍 Localisation
 
 ### Is the UI available in languages other than English and Portuguese?
 
 Currently **/en** and **/pt‑BR** are maintained. Community translations welcome
 – see `client/src/assets/i18n/`.
-
----
 
 ## 🛠️ Contributing & Support
 

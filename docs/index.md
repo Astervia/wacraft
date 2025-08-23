@@ -7,8 +7,6 @@
 
 > The **fastest way** to give your team an **UI & API** for the official **WhatsApp Cloud API**—powered by Go, Angular and Docker.
 
----
-
 ## Why wacraft? 🚀
 
 | 🚀 **Feature**            | 💡 **Why it matters**                                                             |

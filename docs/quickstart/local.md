@@ -2,8 +2,6 @@
 
 This guide spins up **wacraft** for local hacking: the Go API, PostgreSQL, and the Angular UI (lite) in Docker—plus an HTTPS tunnel so Meta’s webhooks reach your machine.
 
----
-
 ## 1 — Prepare a minimal `.env`
 
 1. Duplicate `compose.env` ➜ `.env`.
@@ -38,8 +36,6 @@ _Need a refresher on each key?_ See
 - [Getting Meta Credentials](../config/meta-setup.md) – obtain Meta creds
 - [Environment Variables Reference](../config/env-vars.md) – full variable table
 
----
-
 ## 2 — Launch the stack
 
 ```bash
@@ -58,8 +54,6 @@ Open **[http://localhost](http://localhost)** and sign in with:
 
 > **Tip:** Need to reset the DB?
 > `docker compose -f docker-compose.lite.yml down -v` drops the volume.
-
----
 
 ## 3 — Expose an HTTPS webhook
 
@@ -84,8 +78,6 @@ This is a brief walkthrough of the steps to register your webhook with Meta and 
 4. Send a message to the WhatsApp number; watch wacraft UI for any received messages.
 
 > **Important:** If you restart the tunnel, its hostname changes—update the Callback URL accordingly.
-
----
 
 ## 4 — Next steps
 
