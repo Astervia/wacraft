@@ -6,8 +6,6 @@ wants HTTPS and persistence without managing Kubernetes.
 
 > **Footprint:** <300 MB RAM when idle, <200 MB compressed image pull.
 
----
-
 ## 🧰 Prerequisites
 
 | What             | Minimum                                  | Notes                                                       |
@@ -18,8 +16,6 @@ wants HTTPS and persistence without managing Kubernetes.
 | TLS cert         | Let’s Encrypt or managed LB              | Terminate HTTPS before traffic reaches the container.       |
 | CPU + RAM        | 2 vCPUs / 2 GB **min** (4 GB sweet‑spot) | UI builds at first boot; RAM spikes to ≈1.2 GB for 2‑3 min. |
 | Meta credentials | `WABA_ID`, `WABA_ACCESS_TOKEN`, …        | See [Getting Meta Credentials](../config/meta-setup.md).    |
-
----
 
 ## 1 — Bootstrap **`.env`**
 
