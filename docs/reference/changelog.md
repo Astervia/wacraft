@@ -5,6 +5,33 @@ All notable changes to **wacraft** will be documented in this file following
 
 ---
 
+## \[v0.1.2] – 2025‑08‑24
+
+### Backend Changes (wacraft-server)
+
+#### 🎉 Added
+
+- **Database indexes**: Added optimized indexes to the `messages` table to accelerate chat feed queries, reduce temporary file usage, and improve latency by @Rfluid in [#6](https://github.com/Astervia/wacraft-server/pull/6).
+    - This includes b-tree, composite, and GIN indexes with `pg_trgm` and `jsonb_path_ops` to target slow query paths.
+
+#### Refactored
+
+- **Codebase**: Updated premium annotations to enhance readability.
+- **Configuration**: Improved indentation in Docker Compose files for better clarity.
+
+### Infrastructure
+
+- **Release scripts**: Added new `lite-release` sync process and related instructions by @Rfluid.
+
+### 📦 Dependencies
+
+- **Bumped** various Go dependencies by @Rfluid.
+
+**Full changelog**: [v0.1.1...v0.1.2](https://github.com/Astervia/wacraft-server/compare/v0.1.1...v0.1.2)
+**Commit**: `1d83d69`
+
+---
+
 ## \[v0.1.4] – 2025‑07‑22 (Client‑only update)
 
 > This update applies _only_ to the **wacraft‑client**—no backend or infrastructure changes were made.
