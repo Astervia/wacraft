@@ -1,6 +1,6 @@
 services:
     server:
-        image: astervia/wacraft-server-lite:v0.1.1
+        image: astervia/wacraft-server-lite:v0.1.2
         restart: unless-stopped
         depends_on:
             - db

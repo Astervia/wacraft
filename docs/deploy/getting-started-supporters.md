@@ -16,7 +16,7 @@ git clone git@github.com:Astervia/wacraft-server.git
 cd wacraft-server
 
 # Build the Docker image
-docker build --ssh default -t astervia/wacraft-server:latest -t astervia/wacraft-server:v0.1.1 .
+docker build --ssh default -t astervia/wacraft-server:latest -t astervia/wacraft-server:v0.1.2 .
 ```
 
 We recommend tagging the image with both `latest` and the specific version number (e.g., `v0.1.1`) to ensure your deployments are consistent and predictable.
