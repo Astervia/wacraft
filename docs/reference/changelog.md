@@ -5,6 +5,81 @@ All notable changes to **wacraft** will be documented in this file following
 
 ---
 
+## \[v0.1.5] – 2025-08-25 (Client-only update)
+
+> This update applies _only_ to the **wacraft-client**—no backend or infrastructure changes were made.
+
+### 🎉 Added
+
+- **Message preview**: Added audio icon display for messages containing audio by @Rfluid in [#31](https://github.com/Astervia/wacraft-client/pull/31).
+- **Shortcuts**: Introduced search shortcut in contacts modal and improved dialog shortcuts by @Rfluid.
+
+### 🛠️ Fixed
+
+- **WebSocket**: Multiple improvements to stability and reconnection flow:
+    - Better handling of opened connections.
+    - Ensured valid socket replacement after disconnection.
+    - Removed unnecessary one-shot subject resets.
+    - Throw explicit errors during socket generation.
+
+- **Media messages**: Fixed layout issues for media message content.
+- **Audio button**: Corrected aspect of the audio download button.
+- **UI paddings**: Adjusted paddings for `conversation-body`, add/cancel buttons, and `list-options-modal`.
+- **Contacts modal**: Fixed misalignment issue.
+- **Search logic**: Corrected pattern application on search values.
+- **Template API**: Prevented multiple API calls to the same template by introducing mutex swapper logic.
+
+### Refactored
+
+- **UI**: Reformatted `list-options-modal` for improved readability.
+
+**Full changelog**: [v0.1.4…v0.1.5](https://github.com/Astervia/wacraft-client/compare/v0.1.4...v0.1.5)
+**Commit**: `7c055b0`
+
+---
+
+## \[v0.1.4] – 2025-08-25 (Server update)
+
+### Backend Changes (wacraft-server)
+
+#### 🎉 Added
+
+- **Contact indexes**: Created new indexes on contact data to accelerate queries and improve performance by @Rfluid in [#7](https://github.com/Astervia/wacraft-server/pull/7).
+- **Query optimizations**: Improved query execution to take full advantage of indexes by @Rfluid.
+- **Validation**: Added validation for content key `LIKE` operations by @Rfluid.
+
+#### 🛠️ Fixed
+
+- **Unaccent searches**: Ensured `LIKE` queries leverage indexes by using unaccented comparisons by @Rfluid in [#8](https://github.com/Astervia/wacraft-server/pull/8).
+- **Docs**: Replaced regex examples with `ILIKE` operator in documentation for consistency by @Rfluid.
+
+**Full changelog**: [v0.1.3…v0.1.4](https://github.com/Astervia/wacraft-server/compare/v0.1.3...v0.1.4)
+**Commit**: `0c740c1`
+
+---
+
+## \[v0.1.3] – 2025-08-25
+
+### Backend Changes (wacraft-server)
+
+#### 🎉 Added
+
+- **Contact indexes**: Introduced new indexes for contact lookups to speed up `LIKE`/`ILIKE` search paths by @Rfluid in [#7](https://github.com/Astervia/wacraft-server/pull/7).
+- **Validation**: Added validation for content-key `LIKE` operations to prevent malformed queries by @Rfluid.
+
+#### 🔧 Changed
+
+- **Query plans**: Reworked queries to ensure the planner uses the new indexes effectively and improved the contact `LIKE` **count** logic by @Rfluid.
+
+#### 🛠️ Fixed
+
+- **Docs**: Replaced regex examples with the `ILIKE` operator for clarity and performance by @Rfluid.
+
+**Full changelog**: [v0.1.2…v0.1.3](https://github.com/Astervia/wacraft-server/compare/v0.1.2...v0.1.3)
+**Commit**: `a65ec2a`
+
+---
+
 ## \[v0.1.2] – 2025‑08‑24
 
 ### Backend Changes (wacraft-server)
