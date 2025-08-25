@@ -86,7 +86,7 @@ docker run -d --name wacraft-server \
   --env-file .env \
   -p 6900:6900 \
   --restart unless-stopped \
-  astervia/wacraft-server-lite:v0.1.2     # supporters use wacraft-server instead of wacraft-server-lite
+  astervia/wacraft-server-lite:latest     # supporters use wacraft-server instead of wacraft-server-lite
 ```
 
 ## 4 — Deploy the Angular UI to Vercel

@@ -1,6 +1,6 @@
 services:
     server:
-        image: astervia/wacraft-server-lite:v0.1.2
+        image: astervia/wacraft-server-lite:latest
         restart: unless-stopped
         depends_on:
             - db
@@ -18,7 +18,7 @@ services:
             - main
 
     client:
-        image: astervia/wacraft-client:v0.1.4
+        image: astervia/wacraft-client:latest
         restart: unless-stopped
         depends_on:
             - server
