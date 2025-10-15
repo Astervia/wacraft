@@ -66,3 +66,5 @@ nav:
     - Support Our Mission:
           - Plans: support/plans.md
           - Consulting Services: support/consulting.md
+    - Technical Internals + System Design:
+          - Message Syncing & Status Flow: system-design/message-sync.md
