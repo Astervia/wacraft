@@ -3,6 +3,51 @@
 All notable changes to **wacraft** will be documented in this file following
 [Keep a Changelog](https://keepachangelog.com/) conventions and SemVer.
 
+## [v0.1.6] – 2025-11-03
+
+### Backend Changes (wacraft-server)
+
+#### 🎉 Added
+
+- **Typing indicator support**: Implemented new _typing_ event support for WhatsApp Cloud API by @Rfluid in [#13](https://github.com/Astervia/wacraft-server/pull/13).
+    - Enables real-time “typing” status broadcast to connected clients.
+    - Adds configuration for client-side typing behavior.
+
+#### 📦 Dependencies
+
+- **WhatsApp Cloud API**: Upgraded to latest version for improved reliability and compatibility with new typing events by @Rfluid.
+
+#### 🧾 Documentation
+
+- Updated API docs to include typing event payloads and usage instructions by @Rfluid.
+
+**Full changelog**: [v0.1.5…v0.1.6](https://github.com/Astervia/wacraft-server/compare/v0.1.5...v0.1.6)
+**Commit**: `feature/send-typing`
+
+---
+
+### Frontend Changes (wacraft-client)
+
+> This update includes both feature and localization improvements.
+
+#### 🎉 Added
+
+- **Typing indicators**: Introduced dynamic typing feedback in conversation views, enhancing real-time interaction awareness by @Rfluid in [#35](https://github.com/Astervia/wacraft-client/pull/35).
+    - Typing loop logic added to `user-conversation-store`.
+    - Configurable typing send behavior under account settings.
+    - New UI animations and pipe injection improvements.
+
+- **New locale**: Added full support for **Spanish (Chile)** (`es-CL`) localization by @ProfishingIT in [#32](https://github.com/Astervia/wacraft-client/pull/32) and [#33](https://github.com/Astervia/wacraft-client/pull/33).
+    - Added `"source": "/es-CL/:path*"` rewrite to `vercel.json`.
+    - Ensures proper routing and locale loading for Chilean Spanish users.
+
+#### 🛠️ Fixed
+
+- **UI consistency**: Adjusted components and pipes to correctly reflect typing state and prevent injection issues by @Rfluid.
+
+**Full changelog**: [v0.1.5…v0.1.6](https://github.com/Astervia/wacraft-client/compare/v0.1.5...v0.1.6)
+**Commit**: `feature/send-typing`
+
 ---
 
 ## \[v0.1.5] – 2025-08-25 (Client-only update)
