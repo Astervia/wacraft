@@ -3,6 +3,21 @@
 All notable changes to **wacraft** will be documented in this file following
 [Keep a Changelog](https://keepachangelog.com/) conventions and SemVer.
 
+## [v0.1.7] – 2025-11-04 (Server-only update)
+
+> This update applies _only_ to the **wacraft-server**—no client changes were made.
+
+### 📦 Dependencies
+
+- **WhatsApp Cloud API**: Updated to the latest available SDK revision to ensure compatibility with recent Meta changes by @Rfluid.
+- **Go modules**: General dependency refresh across the codebase to incorporate upstream fixes and security patches by @Rfluid.
+
+### 🛠️ Maintenance
+
+- Internal housekeeping to align module versions, regenerate vendored metadata, and ensure reproducible builds.
+
+**Full changelog**: [v0.1.6…v0.1.7](https://github.com/Astervia/wacraft-server/compare/v0.1.6...v0.1.7)
+
 ## [v0.1.6] – 2025-11-03
 
 ### Backend Changes (wacraft-server)
