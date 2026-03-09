@@ -1,0 +1,31 @@
+name: Publish Docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install mkdocs-material ghp-import
+
+      - name: Build docs
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages
+        run: ghp-import -n -p -f site -c wacraft.astervia.tech
