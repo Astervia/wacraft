@@ -1,21 +1,61 @@
-# 📖 Product Overview (Usage Guide)
+# 📖 Product Overview
 
-Welcome to **wacraft** – an open‑source WhatsApp Cloud Platform that bundles a
-battle‑ready API, modern Angular UI, automation nodes for Node‑RED and optional
-cloud tooling. This page gives you the **big‑picture** before you dive into the
-feature‑specific guides.
+Welcome to **wacraft** – an open‑source WhatsApp Cloud Platform that bundles a battle‑ready API, modern Angular UI, and n8n‑compatible automation webhooks. This page gives you the **big‑picture** before you dive into the feature‑specific guides.
 
-## What’s in the box?
+## ☁️ wacraft Console
 
-| Layer           | Component                                | Purpose                                                                                                                            |
-| --------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| **API Server**  | `wacraft‑server` / `wacraft‑server‑lite` | Go REST service that proxies the WhatsApp Cloud API, stores state in PostgreSQL and exposes webhooks, RBAC, campaigns & analytics. |
-| **Web UI**      | `wacraft‑client`                         | Angular 17 SPA for operators: chats, templates, campaigns, users, settings. Tailwind + Angular Material, fully keyboard‑driven.    |
-| **Automations** | `wacraft‑nodered`                        | Pre‑built Node‑RED with custom nodes to orchestrate flows – trigger on inbound messages, call 3rd‑party APIs, send replies.        |
-| **Docs**        | (this site)                              | Developer & operator handbook. Hosting‑agnostic deployment recipes, usage walkthroughs and API reference.                          |
+**[console.wacraft.astervia.tech](https://console.wacraft.astervia.tech)** is the hosted, multi-tenant wacraft platform managed by Astervia. It runs the same open-source stack — no installation required. Sign up, create a workspace, add your WhatsApp phone config through the UI, and you're live.
 
-> **Open‑core**: All core functionality is MIT‑licensed. “Supporter” tiers unlock
-> extra features (analytics dashboards, premium nodes, advanced campaigns).
+Use the Console if you want to get started immediately without managing infrastructure. Everything in this documentation applies to both the Console and self-hosted deployments.
+
+## What's in the box?
+
+| Layer          | Component          | Purpose                                                                                                                                       |
+| -------------- | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| **API Server** | `wacraft‑server`   | Go REST service that proxies the WhatsApp Cloud API, stores state in PostgreSQL and exposes webhooks, workspaces, RBAC, campaigns & billing.  |
+| **Web UI**     | `wacraft‑client`   | Angular SPA for operators: chats, templates, campaigns, phone configs, workspace members, billing. Tailwind + Angular Material, keyboard‑driven. |
+| **Docs**       | (this site)        | Developer & operator handbook. Deployment recipes, usage walkthroughs and API reference.                                                      |
+
+> **Fully open**: The full backend (`wacraft-server`) is MIT‑licensed with all features included. No lite/pro split.
+
+## Architecture at a glance
+
+```
+┌─────────────────────────────────────────────┐
+│                  wacraft                    │
+│                                             │
+│  ┌──────────────┐     ┌──────────────────┐  │
+│  │  Angular UI  │────▶│  Go API Server   │  │
+│  │ (wacraft-    │     │ (wacraft-server) │  │
+│  │  client)     │     │  port 6900       │  │
+│  └──────────────┘     └────────┬─────────┘  │
+│                                │            │
+│                    ┌───────────▼──────────┐ │
+│                    │     PostgreSQL        │ │
+│                    └──────────────────────┘ │
+└─────────────────────────────────────────────┘
+         │                        ▲
+         ▼                        │
+  WhatsApp Cloud API         Webhook events
+```
+
+## Core Concepts
+
+### Workspaces
+
+All resources are scoped to a **workspace**: contacts, messages, campaigns, phone configs, and webhooks. Users can belong to multiple workspaces with independent permission sets. See [Workspaces & Permissions](./workspaces.md).
+
+### Phone Configs
+
+Connect one or more WhatsApp phone numbers to a workspace via the UI — no environment variable restarts needed. See [Phone Config Guide](../config/phone-config.md).
+
+### Policy‑based Permissions
+
+Workspace membership comes with fine‑grained **policies** (e.g. `message.send`, `campaign.run`, `billing.manage`) that control exactly what each member can do. See [Workspaces & Permissions](./workspaces.md).
+
+### Billing
+
+Optional throughput‑based billing powered by Stripe. Users subscribe to plans at `/billing`; admins manage plans and subscriptions at `/billing-admin`. See [Billing Guide](./billing.md).
 
 ## API Reference
 
@@ -23,21 +63,15 @@ Interactive REST docs live under **`/docs`** of any running server instance.
 
 _Example:_ `https://api.example.com/docs`
 
-- Built with **Swagger UI** / OpenAPI 3.1 – try calls right from the browser.
-- Endpoints are versioned; breaking changes bump the API major (e.g. `/v1`).
-- Models reuse the server’s Go structs, so the JSON is always up‑to‑date.
-- Use the auth endpoints do copy your `token` and make requests from the browser. If you are using the Swagger UI, remember to put `Bearer` before the token.
+- Built with **Swagger UI** / OpenAPI — try calls right from the browser.
+- Use the auth endpoints to copy your `token` and make requests. Put `Bearer` before the token in Swagger UI.
 
 ## Internationalisation (i18n)
-
-The UI ships with two maintained locales:
 
 | Path     | Language                          |
 | -------- | --------------------------------- |
 | `/en`    | **English** 🇺🇸 – default fallback |
-| `/pt-BR` | **Português (Brasil)** 🇧🇷         |
-
-Just append the locale to the base URL:
+| `/pt-BR` | **Português (Brasil)** 🇧🇷         |
 
 ```text
 https://app.example.com/en        # English UI
@@ -48,15 +82,19 @@ https://app.example.com/pt-BR     # Portuguese UI
 
 ## Where to next?
 
-| Task                     | Guide                                         |
-| ------------------------ | --------------------------------------------- |
-| Check UI features        | [UI Walkthrough](./ui.md)                     |
+| Task                    | Guide                                           |
+| ----------------------- | ----------------------------------------------- |
+| Use hosted platform     | [wacraft Console](https://console.wacraft.astervia.tech) |
+| Automate with n8n       | [n8n Integration](./n8n.md)                     |
+| Tour the UI             | [UI Walkthrough](./ui.md)                       |
+| Configure a phone number | [Phone Config](../config/phone-config.md)      |
+| Manage team access      | [Workspaces & Permissions](./workspaces.md)    |
+| Set up billing          | [Billing](./billing.md)                         |
 | Local / single‑VM deploy | [Docker Compose](../deploy/docker-compose.md) |
-| Minimal VM + Vercel CDN  | [Binary + Vercel](../deploy/binary-vercel.md) |
-| Node‑RED automations     | [Node‑RED integration](../deploy/node-red.md) |
-| All deployment options   | [Deployment overview](../deploy/overview.md)  |
+| Minimal VM + Vercel CDN | [Binary + Vercel](../deploy/binary-vercel.md)   |
+| All deployment options  | [Deployment overview](../deploy/overview.md)    |
 
 Need bespoke hosting or feature forks? **Astervia** provides consultancy –
 email [wacraft@astervia.tech](mailto:wacraft@astervia.tech) to scope a custom deployment.
 
-Happy building 🚀
+Happy building 🚀

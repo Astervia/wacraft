@@ -10,6 +10,7 @@ theme:
     features:
         - content.code.copy
         - navigation.footer
+        - navigation.tabs
     palette:
         - scheme: default
           toggle:
@@ -40,31 +41,53 @@ extra:
 copyright: Copyright &copy; 2025 Astervia
 
 nav:
-    - Overview: index.md
-    - Quick‑Start:
-          - Local Setup (5 min): quickstart/local.md
-          - Production Deploy (Docker / Vercel): quickstart/production.md
-    - Configuration:
-          - Getting Meta Credentials: config/meta-setup.md
-          - Env Vars Overview: config/env-vars.md
-          - Webhook Setup: config/webhook-setup.md
-    - Deployment Guides:
-          - Deployment Overview: deploy/overview.md
-          - Docker Compose: deploy/docker-compose.md # full stack
-          - Binary + Vercel (frontend): deploy/binary-vercel.md
-          - Node‑RED Integration*: deploy/node-red.md
-          # - Supporter‑only Extras*: deploy/supporters.md # deltas + link to donation page
-    - Usage Guide:
-          - Product Overview: guide/overview.md
-          - UI Walkthrough: guide/ui.md
-          - Campaigns: guide/campaigns.md
-          - FAQs & Troubleshooting: guide/faq.md
-          - Getting Started (Supporters)*: deploy/getting-started-supporters.md
+    - v0.2.x (Latest):
+          - Overview: index.md
+          - Quick‑Start:
+                - Local Setup (5 min): quickstart/local.md
+                - Production Deploy: quickstart/production.md
+          - Configuration:
+                - Getting Meta Credentials: config/meta-setup.md
+                - Phone Number Config: config/phone-config.md
+                - Env Vars Reference: config/env-vars.md
+                - Webhook Setup: config/webhook-setup.md
+                - Firewall & Rate Limiting: config/firewall.md
+                - Stripe / Billing Setup: config/stripe-setup.md
+          - Deployment Guides:
+                - Deployment Overview: deploy/overview.md
+                - Docker Compose: deploy/docker-compose.md
+                - Binary + Vercel (frontend): deploy/binary-vercel.md
+          - Usage Guide:
+                - Product Overview: guide/overview.md
+                - UI Walkthrough: guide/ui.md
+                - Workspaces & Permissions: guide/workspaces.md
+                - Billing: guide/billing.md
+                - n8n Integration: guide/n8n.md
+                - Campaigns: guide/campaigns.md
+                - FAQs & Troubleshooting: guide/faq.md
+    - v0.1.x (Legacy):
+          - Overview: v1/index.md
+          - Quick‑Start:
+                - Local Setup (5 min): v1/quickstart/local.md
+                - Production Deploy: v1/quickstart/production.md
+          - Configuration:
+                - Getting Meta Credentials: v1/config/meta-setup.md
+                - Env Vars Overview: v1/config/env-vars.md
+                - Webhook Setup: v1/config/webhook-setup.md
+          - Deployment Guides:
+                - Deployment Overview: v1/deploy/overview.md
+                - Docker Compose: v1/deploy/docker-compose.md
+                - Binary + Vercel (frontend): v1/deploy/binary-vercel.md
+                - Node‑RED Integration: v1/deploy/node-red.md
+          - Usage Guide:
+                - Product Overview: v1/guide/overview.md
+                - UI Walkthrough: v1/guide/ui.md
+                - Campaigns: v1/guide/campaigns.md
+                - FAQs & Troubleshooting: v1/guide/faq.md
     - Reference:
-          # - API (auto‑generated): reference/api.md          # embed/redoc‑html export
           - Changelog: reference/changelog.md
     - Support Our Mission:
           - Plans: support/plans.md
           - Consulting Services: support/consulting.md
-    - Technical Internals + System Design:
+    - Technical Internals:
           - Message Syncing & Status Flow: system-design/message-sync.md

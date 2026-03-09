@@ -1,43 +1,38 @@
 # ❓ Frequently Asked Questions
 
-A curated list of common questions about **wacraft** – from licensing to
-troubleshooting the WhatsApp Cloud account. Don’t see your question? Email us
-at **[wacraft@astervia.tech](mailto:wacraft@astervia.tech)** and we’ll update this page.
+A curated list of common questions about **wacraft v0.2.x**. Don't see your question? Email us at **[wacraft@astervia.tech](mailto:wacraft@astervia.tech)** and we'll update this page.
 
 ## 📦 General
 
 ### What is _wacraft_?
 
-An open‑source platform that wraps the WhatsApp Cloud API with a Go backend,
-Angular operator UI, and automation platforms support. You self‑host it and keep
-full control of data.
+An open‑source platform that wraps the WhatsApp Cloud API with a Go backend and Angular operator UI. Features include multi‑tenant workspaces, multiple phone number support, policy‑based permissions, and optional Stripe billing. You self‑host it and keep full control of your data.
 
 ### Is it really free?
 
-Yes – the core code is MIT‑licensed. Donating unlocks supporter‑only images
-(`wacraft-server`, Node‑RED nodes, premium analytics), but the Lite stack is
-free forever.
+Yes – the full backend (`wacraft-server`) is MIT‑licensed with all features included. There is no lite/pro split in v0.2.x.
 
-### How do I become a supporter?
+### Where do I configure WhatsApp credentials?
 
-Donate **X‑Y satoshis** (see [plans](../support/plans.md)). You’ll receive
-Docker credentials + repo access within 24 h.
+In v0.2.x, phone number credentials are configured in the UI at `/phone-configs/new` — not in environment variables. See [Phone Config Guide](../config/phone-config.md).
 
 ## 🚀 Deployment
 
 ### Fastest way to try it?
 
-Use the **Docker Compose Lite** stack: `docker compose -f docker-compose.lite.yml up -d`.
+```bash
+git clone https://github.com/Astervia/wacraft.git
+cp compose.env .env
+docker compose up -d
+```
 
 ### I already use Vercel – can I keep it?
 
-Yes. Follow the [Binary + Vercel](../deploy/binary-vercel.md) guide: server on your VM,
-UI on Vercel CDN.
+Yes. Follow the [Binary + Vercel](../deploy/binary-vercel.md) guide: server on your VM, UI on Vercel CDN.
 
 ### Need help with multi‑region, Kubernetes, or on‑prem?
 
-Astervia offers paid consultancy. Reach out via
-[wacraft@astervia.tech](mailto:wacraft@astervia.tech) with your requirements.
+Astervia offers paid consultancy. Reach out via [wacraft@astervia.tech](mailto:wacraft@astervia.tech).
 
 ## 🔐 Accounts & Permissions
 
@@ -45,64 +40,83 @@ Astervia offers paid consultancy. Reach out via
 
 `su@sudo` / value of `SU_PASSWORD` in your `.env`.
 
-### Can I create agent roles?
+### What's the difference between global roles and workspace policies?
 
-RBAC scaffolding is present; detailed roles land in **v0.2**, but when you create a user you already specify a set of roles. For now, create separate JWT tokens for integrations.
+- **Global role `admin`** – grants access to app‑wide pages like `/billing-admin` and user management.
+- **Global role `user`** – regular account, no special app‑level privileges.
+- **Workspace policies** – fine‑grained permissions within a workspace (e.g. `message.send`, `campaign.run`). Assigned per member per workspace.
+
+See [Workspaces & Permissions](../guide/workspaces.md) for the full policy list.
+
+### Can I invite users to a workspace without giving them admin access?
+
+Yes. Assign only the policies they need (e.g. `message.read`, `message.send`) when inviting them.
+
+## 💳 Billing
+
+### Is billing required?
+
+No. Billing is optional. The server works without `BILLING_ENABLED=true` or Stripe credentials.
+
+### How do I set up Stripe?
+
+See the [Stripe Setup Guide](../config/stripe-setup.md).
+
+### Where do users subscribe to plans?
+
+Users go to `/billing`. Admins manage plans at `/billing-admin`.
 
 ## 🗄️ Data & Backups
 
 ### Where is data stored?
 
-All persistent data lives in PostgreSQL (container `db` or your managed
-instance). Media is proxied; original files stay in Meta’s CDN.
+All persistent data lives in PostgreSQL. Media is proxied; original files stay in Meta's CDN.
 
 ### How do I back up?
 
-`docker compose exec db pg_dump -U postgres postgres > backup.sql` or schedule
-managed snapshots in RDS.
+```bash
+docker compose exec db pg_dump -U postgres postgres > backup.sql
+```
 
-## 🌐 WhatsApp / Meta Issues
+Or schedule managed snapshots in RDS / Cloud SQL.
 
-### WhatsApp “Pending Payment Method” / card declined / 2FA issues
+## 🌐 WhatsApp / Meta Issues
 
-Those are **Meta Business account problems** – we can’t fix them via the API.
-Check the Meta Business Manager > Payments page. If it still blocks you,
-collect screenshots and email **[wacraft@astervia.tech](mailto:wacraft@astervia.tech)**; our team can escalate
-through partner support.
+### WhatsApp "Pending Payment Method" / card declined / 2FA issues
+
+Those are **Meta Business account problems** — we can't fix them via the API. Check Meta Business Manager > Payments. If it still blocks you, collect screenshots and email **[wacraft@astervia.tech](mailto:wacraft@astervia.tech)**.
 
 ### Webhook verify token fails
 
-Ensure the callback URL is reachable (`https://api.example.com/webhook-in`) and
-`WEBHOOK_VERIFY_TOKEN` matches exactly – no extra whitespace.
+Ensure the **Callback URL** is reachable (`https://api.example.com/webhook-in`) and the **Verify Token** in Meta exactly matches the **Webhook Verify Token** you entered in the Phone Config UI — no extra whitespace.
 
 ### Messages stuck in _pending_
 
-1. Verify your WABA is in the **Business Verified** state.
-2. Check **Message Status Sync Timeout** in `.env` (default 20 s).
-3. Inspect server logs (`docker compose logs server`).
+1. Verify your WABA is in the **Business Verified** state.
+2. Check the **Access Token** in Phone Config is a long‑lived system user token.
+3. Check `MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS` in `.env` (default 20 s).
+4. Inspect server logs: `docker compose logs server`.
 
 ## 🌍 Localisation
 
 ### Is the UI available in languages other than English and Portuguese?
 
-Currently **/en** and **/pt‑BR** are maintained. Community translations welcome
-– see `client/src/assets/i18n/`.
+Currently **/en** and **/pt‑BR** are maintained. Community translations welcome — see `client/src/assets/i18n/`.
 
 ## 🛠️ Contributing & Support
 
 ### Found a bug?
 
-Open an issue in [https://github.com/Astervia/wacraft/issues](https://github.com/Astervia/wacraft/issues) with steps and
-logs.
+Open an issue at [https://github.com/Astervia/wacraft/issues](https://github.com/Astervia/wacraft/issues) with steps and logs.
 
 ### Feature requests?
 
-Same issue tracker – label it **enhancement**. Supporters get priority triage.
+Same issue tracker — label it **enhancement**.
 
 ### Commercial SLA / custom forks?
 
-[Plan _Supernova_](../support/plans.md) includes SLA and bespoke development. Email **Astervia** to discuss.
+Email **[wacraft@astervia.tech](mailto:wacraft@astervia.tech)** to discuss a custom engagement.
 
 ---
 
-_Last updated: 2025‑05‑11_
+_Last updated: 2026‑03_

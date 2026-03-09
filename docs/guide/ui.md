@@ -1,28 +1,28 @@
-# 🖥️ wacraft UI Walkthrough
+# 🖥️ wacraft UI Walkthrough
 
 Welcome to a quick tour of the **wacraft‑client** interface. This guide covers
-the daily workflow for operators and admins, from chatting with users to
-sending bulk campaigns and wiring automations.
+the daily workflow for operators and admins, from chatting with contacts to
+managing workspace members and billing.
 
-## 1 — Layout at a glance
+## 1 — Layout at a glance
 
 ![Chats UI](../assets/images/chats-ui-with-conversation.png)
 
-| Area                      | What you’ll find                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------ |
-| **(A) Sidebar**           | Vertical icons for Chats, Templates, Campaigns, Webhooks, Users, Settings. Hit **1–7** to jump via keyboard. |
-| **(B) List panel**        | Context‑aware list (chats, templates, etc.). Supports search and column sort.                                |
-| **(C) Workspace**         | Main content: conversations, builders, settings.                                                             |
-| **(D) Utility bar**       | Per‑page actions (menu, filter, CSV export, etc.).                                                           |
-| **(E) Composer / Footer** | Message input or save / edit buttons.                                                                        |
+| Area                      | What you'll find                                                                                              |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| **(A) Sidebar**           | Vertical icons for Chats, Templates, Campaigns, Webhooks, Phone Configs, Workspace Members, and more.        |
+| **(B) List panel**        | Context‑aware list (chats, templates, etc.). Supports search and column sort.                                 |
+| **(C) Workspace**         | Main content: conversations, builders, settings.                                                              |
+| **(D) Utility bar**       | Per‑page actions (menu, filter, CSV export, etc.).                                                            |
+| **(E) Composer / Footer** | Message input or save / edit buttons.                                                                         |
 
-> **Keyboard power‑users:** press **Ctrl /** anywhere to open the shortcut cheat‑sheet.
+> **Keyboard power‑users:** press **Ctrl /** anywhere to open the shortcut cheat‑sheet.
 
 ![Keyboard shortcuts](../assets/images/keyboard-shortcuts.png)
 
-## 2 — Chats & Conversation tools
+## 2 — Chats & Conversation tools
 
-### 2.1 Live chat
+### 2.1 Live chat
 
 ![Conversation](../assets/images/conversation-with-options-popup.png)
 
@@ -31,7 +31,7 @@ sending bulk campaigns and wiring automations.
 - Click the hamburger menu (**⋮**) for **conversation options**: contact
   details, shared media and message search.
 
-### 2.2 Contact details & Media gallery
+### 2.2 Contact details & Media gallery
 
 | Details panel                                                              | Media & docs                                                           |
 | -------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -39,21 +39,39 @@ sending bulk campaigns and wiring automations.
 
 Both panes slide in from the right without leaving the chat context.
 
-## 3 — Account & Local settings
+## 3 — Account & Local settings
 
 ![Account settings](../assets/images/account-settings.png)
 
-- **Read control:** decide whether read receipts are manual or synced from the
-  server.
+- **Read control:** decide whether read receipts are manual or synced from the server.
 - **Theme switcher:** Light, Dark, or System (auto).
-- **Auto preview & mark as read:** tweak message behaviour only for _your_
-  browser; doesn’t affect other agents.
+- **Auto preview & mark as read:** tweak message behaviour only for _your_ browser.
 
-## 4 — Templates ➡️ CSV ➡️ Campaigns
+## 4 — Phone Configs (`/phone-configs`)
 
-The fastest way to launch a bulk send is **Template → CSV → Campaign**.
+Manage the WhatsApp phone numbers connected to this workspace. Click **New Phone Config** to add a number.
 
-1. **Open Templates** in the sidebar _(hotkey **4**)_.
+See [Phone Config Guide](../config/phone-config.md) for field descriptions and a full walkthrough.
+
+## 5 — Workspace Members (`/workspace-members`)
+
+![Workspace Members](../assets/images/workspace-members-screen.png)
+
+Invite team members and assign them granular **policies** (e.g. `message.send`, `campaign.run`). Click **Invite Member** to send an invitation.
+
+See [Workspaces & Permissions](./workspaces.md) for the full policy reference.
+
+## 6 — Workspace Settings (`/workspace-settings`)
+
+![Workspace Settings](../assets/images/workspace-settings-screen.png)
+
+Edit the workspace name, slug, and description. The **Danger Zone** lets you permanently delete the workspace.
+
+## 7 — Templates ➡️ CSV ➡️ Campaigns
+
+The fastest way to launch a bulk send is **Template → CSV → Campaign**.
+
+1. **Open Templates** in the sidebar.
    Hover a template and click the **📄 CSV** button.
 
     ![Template CSV](../assets/images/template-with-csv-button-hover.png)
@@ -65,48 +83,48 @@ The fastest way to launch a bulk send is **Template → CSV → Campaign**.
 messaging_product,recipient_type,to,type,template.name,template.language.code,template.components
 whatsapp,individual,1111111111,template,hello_world,en_US,[]
 whatsapp,individual,2222222222,template,hello_world,en_US,[]
-whatsapp,individual,3333333333,template,hello_world,en_US,[]
 ```
 
-3. Go to **Campaigns** _(hotkey **5**)_ and **➕ New Campaign**.
-   Give it a name.
+3. Go to **Campaigns** and **➕ New Campaign**. Give it a name.
 
 4. In **Add messages to campaign** drag‑and‑drop the CSV or click to upload.
 
     ![Campaign upload](../assets/images/campaigns-overview.png)
 
-5. Review totals, then hit the blue **Send ▶️** button. Status updates live
-   (messages sent / unsent). That’s it – campaign en‑route!
+5. Hit the blue **Send ▶️** button. Status updates live. That's it!
 
-> **Tip:** You can download _any_ template’s CSV, copy rows across files and
-> reuse them later; IDs are preserved.
+See [Campaigns](./campaigns.md) for a full guide.
 
-## 5 — Webhooks & Logs
+## 8 — Webhooks & Logs
 
 ![Webhooks](../assets/images/webhooks-overview.png)
 
-- Register outbound events (e.g. **receive_whatsapp_message**) with URL,
-  timeout and optional auth header.
+- Register outbound events (e.g. **receive_whatsapp_message**) with URL, timeout, and optional auth header.
+- Wire events to **n8n** or any HTTP endpoint.
 - Built‑in log viewer with code/filter/search to track success and failures.
 
-## 6 — Power navigation cheatsheet
+## 9 — Billing (`/billing`)
+
+View your current usage against plan limits and subscribe to throughput plans. See [Billing Guide](./billing.md).
+
+## 10 — Power navigation cheatsheet
 
 | Task                      | Shortcut       |
 | ------------------------- | -------------- |
-| Jump to sidebar item 1‑7  | `1` … `7`      |
-| Global search             | `Ctrl Shift F` |
-| Focus text input in chat  | `Ctrl Y`       |
-| Open **Help / Shortcuts** | `Ctrl /`       |
-| Reply to message          | `Ctrl R`       |
-| Open message data         | `Ctrl D`       |
+| Jump to sidebar item 1‑7  | `1` … `7`      |
+| Global search             | `Ctrl Shift F` |
+| Focus text input in chat  | `Ctrl Y`       |
+| Open **Help / Shortcuts** | `Ctrl /`       |
+| Reply to message          | `Ctrl R`       |
+| Open message data         | `Ctrl D`       |
 
-> **Shift Esc** closes any modal/dialog instantly.
+> **Shift Esc** closes any modal/dialog instantly.
 
-## 7 — What’s next?
+## 11 — What's next?
 
-- Wire **Node‑RED** automations → see [Node‑RED Integration](../deploy/node-red.md).
-- Build CSV campaigns at scale with the **Campaigns API**.
-- Explore advanced search and keyboard workflows – you can operate the whole
-  client without a mouse!
+- [Workspaces & Permissions](./workspaces.md) — manage team access.
+- [Billing](./billing.md) — subscribe to throughput plans.
+- [Phone Config](../config/phone-config.md) — add more phone numbers.
+- Build CSV campaigns at scale — see [Campaigns](./campaigns.md).
 
 Happy messaging 🚀
