@@ -57,6 +57,7 @@ nav:
                 - Deployment Overview: deploy/overview.md
                 - Docker Compose: deploy/docker-compose.md
                 - Binary + Vercel (frontend): deploy/binary-vercel.md
+                - Horizontal Scaling: deploy/horizontal-scaling.md
           - Usage Guide:
                 - Product Overview: guide/overview.md
                 - UI Walkthrough: guide/ui.md

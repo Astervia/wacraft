@@ -90,6 +90,20 @@ See [Stripe / Billing Setup](./stripe-setup.md) for a full walkthrough.
 | -------- | -------- | ------- | ----------- |
 | `MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS` | ✕ | `20` | How long the server waits for WhatsApp delivery receipts before flagging a send failure. |
 
+### Horizontal Scaling (Redis)
+
+Required only when running multiple server replicas. Set `SYNC_BACKEND=redis` and configure the variables below to replace in-memory primitives with distributed Redis equivalents. See [Horizontal Scaling](../deploy/horizontal-scaling.md) for a full guide.
+
+| Variable | Required | Default | Description |
+| -------- | -------- | ------- | ----------- |
+| `SYNC_BACKEND` | ✕ | `memory` | `memory` (default, single-instance) or `redis` (distributed, multi-instance). |
+| `REDIS_URL` | ✕ | `redis://localhost:6379` | Redis connection URL. Only read when `SYNC_BACKEND=redis`. |
+| `REDIS_PASSWORD` | ✕ | _(empty)_ | Redis password. Leave empty if Redis has no auth. |
+| `REDIS_DB` | ✕ | `0` | Redis logical database number. |
+| `REDIS_KEY_PREFIX` | ✕ | `wacraft:` | Prefix applied to all Redis keys — useful for isolating environments on a shared Redis instance. |
+| `REDIS_LOCK_TTL` | ✕ | `30s` | Default TTL for distributed locks (Go duration string, e.g. `30s`, `1m`). |
+| `REDIS_CACHE_TTL` | ✕ | `5m` | Default TTL for distributed cache entries. |
+
 ### Global WhatsApp defaults (optional)
 
 In v0.2.x, WhatsApp credentials are configured **per workspace** in the Phone Config UI. These variables act as **server-wide fallbacks** used for global webhook validation. They are not required for a working deployment.

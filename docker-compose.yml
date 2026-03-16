@@ -3,7 +3,11 @@ services:
         image: astervia/wacraft-server:latest
         restart: unless-stopped
         depends_on:
-            - db
+            db:
+                condition: service_started
+            redis:
+                condition: service_healthy
+                required: false
         ports:
             - "6900:6900"
         env_file:
@@ -13,7 +17,10 @@ services:
             HOST: http://127.0.0.1
             PORT: 6900
             MESSAGE_STATUS_SYNC_TIMEOUT_SECONDS: 10
-
+            SYNC_BACKEND: ${SYNC_BACKEND:-memory}
+            REDIS_URL: ${REDIS_URL:-redis://redis:6379}
+        deploy:
+            replicas: ${APP_REPLICAS:-1}
         networks:
             - main
 
@@ -43,27 +50,23 @@ services:
         networks:
             - main
 
-    # Uncomment this if you are a supporter and is using nodered
-    # nodered:
-    #   image: astervia/wacraft-nodered:v0.1.0
-    #   restart: unless-stopped
-    #   depends_on:
-    #     - server
-    #   ports:
-    #     - "1880:1880"
-    #   env_file:
-    #     - .env
-    #   environment:
-    #     SERVER_HOST: server
-    #   volumes:
-    #     - node_red_data:/data
-    #   networks:
-    #     - main
+    redis:
+        image: redis:7-alpine
+        restart: unless-stopped
+        profiles: [distributed]
+        healthcheck:
+            test: ["CMD", "redis-cli", "ping"]
+            interval: 5s
+            timeout: 3s
+            retries: 3
+        volumes:
+            - redis_data:/data
+        networks:
+            - main
 
 volumes:
     db_data:
-    # Uncomment this if you are a supporter and is using nodered
-    # node_red_data:
+    redis_data:
 
 networks:
     main:
