@@ -21,6 +21,13 @@ theme:
               icon: material/white-balance-sunny
               name: Switch to light mode
 
+markdown_extensions:
+    - pymdownx.tasklist:
+        custom_checkbox: true
+
+extra_javascript:
+    - assets/tasklist.js
+
 plugins:
     - search
 
