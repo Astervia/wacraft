@@ -1,9 +1,9 @@
 # **wacraft** <small>Build WhatsApp Cloud apps in minutes</small>
 
-[![Try the Console](https://img.shields.io/badge/-Try%20the%20Console-25d366?style=for-the-badge&logo=whatsapp)](https://console.wacraft.astervia.tech)
-[![Get Started](https://img.shields.io/badge/-Self%20Host-3b82f6?style=for-the-badge&logo=docker)](quickstart/local.md)
+[![Try the Console](https://img.shields.io/badge/-Try%20the%20Console-25d366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://console.wacraft.astervia.tech)
+[![Get Started](https://img.shields.io/badge/-Self%20Host-3b82f6?style=for-the-badge&logo=docker&logoColor=white)](quickstart/local.md)
 [![GitHub Repo](https://img.shields.io/badge/-GitHub-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Astervia/wacraft)
-[![Deploy Overview](https://img.shields.io/badge/-Deployment%20Options-6b7280?style=for-the-badge&logo=rocket)](deploy/overview.md)
+[![Deploy Overview](https://img.shields.io/badge/-Deployment%20Options-6b7280?style=for-the-badge&logo=rocket&logoColor=white)](deploy/overview.md)
 
 > The **fastest way** to give your team an **UI & API** for the official **WhatsApp Cloud API**—powered by Go, Angular and Docker.
 
